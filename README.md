@@ -8,7 +8,7 @@ Anonymous addiction screening and resource navigation platform for students.
 
 ## 🎯 Overview
 
-Addictae is a web and mobile platform designed to help students identify risky behaviors related to addictions and connect them with appropriate support resources in under 5 minutes.
+Declic is a web and mobile platform designed to help students identify risky behaviors related to addictions and connect them with appropriate support resources in under 5 minutes.
 
 The platform addresses a critical gap: while addiction support services exist, students often don't know they need help, don't know where to find it, or feel too stigmatized to seek it out.
 
