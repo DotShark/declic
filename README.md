@@ -1,4 +1,4 @@
-# Addictae
+# Declic
 
 **Find Support in 5 Minutes**
 
