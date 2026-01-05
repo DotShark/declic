@@ -1,0 +1,106 @@
+{
+  "id": "declic-v1",
+  "title": "Declic - Prévention Addictions",
+  "description": "Un outil d'information et d'orientation pour faire le point sur tes habitudes",
+  "estimatedDurationMinutes": 10,
+  "modules": [
+    {
+      "behavior": "ALCOHOL",
+      "name": "Alcool",
+      "file": "modules/alcohol.json",
+      "order": 1
+    },
+    {
+      "behavior": "TOBACCO",
+      "name": "Tabac",
+      "file": "modules/tobacco.json",
+      "order": 2
+    },
+    {
+      "behavior": "CANNABIS",
+      "name": "Cannabis",
+      "file": "modules/cannabis.json",
+      "order": 3
+    },
+    {
+      "behavior": "MEDICATION",
+      "name": "Médicaments détournés",
+      "file": "modules/medication.json",
+      "order": 4
+    },
+    {
+      "behavior": "PARTY_DRUGS",
+      "name": "Drogues festives",
+      "file": "modules/party-drugs.json",
+      "order": 5
+    },
+    {
+      "behavior": "SOCIAL_MEDIA",
+      "name": "Réseaux sociaux",
+      "file": "modules/social-media.json",
+      "order": 6
+    },
+    {
+      "behavior": "VIDEO_GAMES",
+      "name": "Jeux vidéo",
+      "file": "modules/video-games.json",
+      "order": 7
+    },
+    {
+      "behavior": "GAMBLING",
+      "name": "Paris sportifs / jeux d'argent",
+      "file": "modules/gambling.json",
+      "order": 8
+    },
+    {
+      "behavior": "PORNOGRAPHY",
+      "name": "Pornographie / applications de rencontre",
+      "file": "modules/pornography.json",
+      "order": 9
+    },
+    {
+      "behavior": "SNACKING",
+      "name": "Grignotage / alimentation compulsive",
+      "file": "modules/snacking.json",
+      "order": 10
+    },
+    {
+      "behavior": "OVERWORK",
+      "name": "Surmenage / perfectionnisme",
+      "file": "modules/overwork.json",
+      "order": 11
+    }
+  ],
+  "motivationQuestion": {
+    "id": "q1-motivation",
+    "type": "SINGLE_CHOICE",
+    "text": "Qu'est-ce qui t'amène ici aujourd'hui ?",
+    "options": [
+      {
+        "id": "motivation-curiosity",
+        "text": "Simple curiosité",
+        "value": 0
+      },
+      {
+        "id": "motivation-questioning",
+        "text": "Je me pose des questions sur mes habitudes",
+        "value": 0
+      },
+      {
+        "id": "motivation-concerned-relative",
+        "text": "Un proche s'inquiète pour moi",
+        "value": 0
+      },
+      {
+        "id": "motivation-seeking-help",
+        "text": "Je cherche de l'aide",
+        "value": 0
+      },
+      {
+        "id": "motivation-other",
+        "text": "Autre",
+        "value": 0
+      }
+    ]
+  }
+}

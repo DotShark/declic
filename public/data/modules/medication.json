@@ -1,0 +1,184 @@
+{
+  "id": "module-medication",
+  "name": "Médicaments détournés",
+  "behavior": "MEDICATION",
+  "order": 4,
+  "questions": [
+    {
+      "id": "q1-medication-frequency",
+      "type": "SINGLE_CHOICE",
+      "text": "À quelle fréquence consommes-tu des médicaments hors prescription ?",
+      "associatedBehavior": "MEDICATION",
+      "options": [
+        {
+          "id": "freq-never",
+          "text": "Jamais",
+          "value": 0
+        },
+        {
+          "id": "freq-rarely",
+          "text": "Rarement",
+          "value": 1
+        },
+        {
+          "id": "freq-regular",
+          "text": "Régulièrement",
+          "value": 2
+        },
+        {
+          "id": "freq-very-often",
+          "text": "Très souvent",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "q2-medication-quantity",
+      "type": "SINGLE_CHOICE",
+      "text": "En moyenne, combien de prises lors d'une journée concernée ?",
+      "associatedBehavior": "MEDICATION",
+      "options": [
+        {
+          "id": "quantity-1",
+          "text": "1",
+          "value": 1
+        },
+        {
+          "id": "quantity-2",
+          "text": "2",
+          "value": 2
+        },
+        {
+          "id": "quantity-3-plus",
+          "text": "3 ou plus",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "q3-medication-situations",
+      "type": "MULTIPLE_CHOICE",
+      "text": "Dans quelles situations les consommes-tu le plus souvent ?",
+      "associatedBehavior": "MEDICATION",
+      "options": [
+        {
+          "id": "sit-sleep",
+          "text": "Pour dormir",
+          "value": 2
+        },
+        {
+          "id": "sit-stress",
+          "text": "Pour gérer le stress ou l'anxiété",
+          "value": 2
+        },
+        {
+          "id": "sit-focus",
+          "text": "Pour rester concentré(e)",
+          "value": 2
+        },
+        {
+          "id": "sit-rhythm",
+          "text": "Pour tenir le rythme scolaire ou professionnel",
+          "value": 2
+        },
+        {
+          "id": "sit-habit",
+          "text": "Par habitude",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "q4-medication-day-without",
+      "type": "SINGLE_CHOICE",
+      "text": "Peux-tu passer une journée sans en consommer ?",
+      "associatedBehavior": "MEDICATION",
+      "options": [
+        {
+          "id": "day-easy",
+          "text": "Oui, sans difficulté",
+          "value": 0
+        },
+        {
+          "id": "day-difficult",
+          "text": "Oui, mais c'est difficile",
+          "value": 2
+        },
+        {
+          "id": "day-unable",
+          "text": "Non, j'ai du mal",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "q5-medication-tolerance",
+      "type": "SINGLE_CHOICE",
+      "text": "As-tu déjà augmenté les doses pour obtenir le même effet ?",
+      "associatedBehavior": "MEDICATION",
+      "options": [
+        {
+          "id": "tolerance-yes",
+          "text": "Oui",
+          "value": 2
+        },
+        {
+          "id": "tolerance-no",
+          "text": "Non",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "q6-medication-stop-ability",
+      "type": "SINGLE_CHOICE",
+      "text": "Penses-tu pouvoir arrêter complètement ?",
+      "associatedBehavior": "MEDICATION",
+      "options": [
+        {
+          "id": "stop-yes-month",
+          "text": "Oui, 1 mois ou plus",
+          "value": 0
+        },
+        {
+          "id": "stop-yes-week",
+          "text": "Oui, 1 semaine maximum",
+          "value": 1
+        },
+        {
+          "id": "stop-no",
+          "text": "Non",
+          "value": 3
+        },
+        {
+          "id": "stop-unknown",
+          "text": "Je ne sais pas",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "id": "q7-medication-regret",
+      "type": "SINGLE_CHOICE",
+      "text": "As-tu déjà regretté cette consommation ?",
+      "associatedBehavior": "MEDICATION",
+      "options": [
+        {
+          "id": "regret-never",
+          "text": "Jamais",
+          "value": 0
+        },
+        {
+          "id": "regret-sometimes",
+          "text": "Parfois",
+          "value": 1
+        },
+        {
+          "id": "regret-often",
+          "text": "Souvent",
+          "value": 2
+        }
+      ]
+    }
+  ]
+}

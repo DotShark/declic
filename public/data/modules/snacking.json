@@ -1,0 +1,189 @@
+{
+  "id": "module-snacking",
+  "name": "Grignotage / alimentation compulsive",
+  "behavior": "SNACKING",
+  "order": 10,
+  "questions": [
+    {
+      "id": "q1-snacking-frequency",
+      "type": "SINGLE_CHOICE",
+      "text": "À quelle fréquence grignotes-tu en dehors des repas ?",
+      "associatedBehavior": "SNACKING",
+      "options": [
+        {
+          "id": "freq-never",
+          "text": "Jamais",
+          "value": 0
+        },
+        {
+          "id": "freq-rarely",
+          "text": "Rarement",
+          "value": 1
+        },
+        {
+          "id": "freq-occasional",
+          "text": "Occasionnellement",
+          "value": 2
+        },
+        {
+          "id": "freq-often",
+          "text": "Souvent",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "q2-snacking-situations",
+      "type": "MULTIPLE_CHOICE",
+      "text": "Dans quelles situations grignotes-tu le plus ?",
+      "associatedBehavior": "SNACKING",
+      "options": [
+        {
+          "id": "sit-stress",
+          "text": "Stress",
+          "value": 2
+        },
+        {
+          "id": "sit-boredom",
+          "text": "Ennui",
+          "value": 1
+        },
+        {
+          "id": "sit-fatigue",
+          "text": "Fatigue",
+          "value": 1
+        },
+        {
+          "id": "sit-emotions",
+          "text": "Émotions négatives",
+          "value": 2
+        },
+        {
+          "id": "sit-habit",
+          "text": "Par habitude",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "q3-snacking-without-hunger",
+      "type": "SINGLE_CHOICE",
+      "text": "As-tu déjà mangé sans avoir faim ?",
+      "associatedBehavior": "SNACKING",
+      "options": [
+        {
+          "id": "hunger-never",
+          "text": "Jamais",
+          "value": 0
+        },
+        {
+          "id": "hunger-sometimes",
+          "text": "Parfois",
+          "value": 1
+        },
+        {
+          "id": "hunger-often",
+          "text": "Souvent",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "id": "q4-snacking-loss-control",
+      "type": "SINGLE_CHOICE",
+      "text": "As-tu déjà ressenti une perte de contrôle en mangeant ?",
+      "associatedBehavior": "SNACKING",
+      "options": [
+        {
+          "id": "control-never",
+          "text": "Jamais",
+          "value": 0
+        },
+        {
+          "id": "control-sometimes",
+          "text": "Parfois",
+          "value": 1
+        },
+        {
+          "id": "control-often",
+          "text": "Souvent",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "id": "q5-snacking-guilt",
+      "type": "SINGLE_CHOICE",
+      "text": "Te sens-tu mal ou coupable après avoir grignoté ?",
+      "associatedBehavior": "SNACKING",
+      "options": [
+        {
+          "id": "guilt-never",
+          "text": "Jamais",
+          "value": 0
+        },
+        {
+          "id": "guilt-sometimes",
+          "text": "Parfois",
+          "value": 1
+        },
+        {
+          "id": "guilt-often",
+          "text": "Souvent",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "id": "q6-snacking-day-without",
+      "type": "SINGLE_CHOICE",
+      "text": "Peux-tu passer une journée sans grignoter ?",
+      "associatedBehavior": "SNACKING",
+      "options": [
+        {
+          "id": "day-easy",
+          "text": "Oui, sans difficulté",
+          "value": 0
+        },
+        {
+          "id": "day-difficult",
+          "text": "Oui, mais c'est difficile",
+          "value": 2
+        },
+        {
+          "id": "day-unable",
+          "text": "Non, j'ai du mal",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "q7-snacking-stop-ability",
+      "type": "SINGLE_CHOICE",
+      "text": "Penses-tu pouvoir changer cette habitude ?",
+      "associatedBehavior": "SNACKING",
+      "options": [
+        {
+          "id": "stop-yes-month",
+          "text": "Oui, 1 mois ou plus",
+          "value": 0
+        },
+        {
+          "id": "stop-yes-week",
+          "text": "Oui, 1 semaine maximum",
+          "value": 1
+        },
+        {
+          "id": "stop-no",
+          "text": "Non",
+          "value": 3
+        },
+        {
+          "id": "stop-unknown",
+          "text": "Je ne sais pas",
+          "value": 2
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "id": "module-gambling",
+  "name": "Paris sportifs / jeux d'argent",
+  "behavior": "GAMBLING",
+  "order": 8,
+  "questions": [
+    {
+      "id": "q1-gambling-ever",
+      "type": "SINGLE_CHOICE",
+      "text": "As-tu déjà joué ou parié de l'argent ?",
+      "associatedBehavior": "GAMBLING",
+      "options": [
+        {
+          "id": "ever-never",
+          "text": "Jamais",
+          "value": 0
+        },
+        {
+          "id": "ever-rarely",
+          "text": "Rarement",
+          "value": 1
+        },
+        {
+          "id": "ever-occasional",
+          "text": "Occasionnellement",
+          "value": 2
+        },
+        {
+          "id": "ever-regular",
+          "text": "Régulièrement",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "q2-gambling-frequency",
+      "type": "SINGLE_CHOICE",
+      "text": "À quelle fréquence joues-tu ou paries ?",
+      "associatedBehavior": "GAMBLING",
+      "options": [
+        {
+          "id": "freq-less-week",
+          "text": "Moins d'une fois par semaine",
+          "value": 1
+        },
+        {
+          "id": "freq-1-2-week",
+          "text": "1-2 fois par semaine",
+          "value": 2
+        },
+        {
+          "id": "freq-several-week",
+          "text": "Plusieurs fois par semaine",
+          "value": 3
+        },
+        {
+          "id": "freq-daily",
+          "text": "Tous les jours",
+          "value": 4
+        }
+      ]
+    },
+    {
+      "id": "q3-gambling-amount",
+      "type": "SINGLE_CHOICE",
+      "text": "En moyenne, combien d'argent mises-tu par session ?",
+      "associatedBehavior": "GAMBLING",
+      "options": [
+        {
+          "id": "amount-less-10",
+          "text": "Moins de 10 €",
+          "value": 1
+        },
+        {
+          "id": "amount-10-50",
+          "text": "10-50 €",
+          "value": 2
+        },
+        {
+          "id": "amount-50-plus",
+          "text": "Plus de 50 €",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "q4-gambling-chasing-losses",
+      "type": "SINGLE_CHOICE",
+      "text": "As-tu déjà rejoué pour tenter de récupérer de l'argent perdu ?",
+      "associatedBehavior": "GAMBLING",
+      "options": [
+        {
+          "id": "chasing-yes",
+          "text": "Oui",
+          "value": 2
+        },
+        {
+          "id": "chasing-no",
+          "text": "Non",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "q5-gambling-impact",
+      "type": "SINGLE_CHOICE",
+      "text": "Le jeu a-t-il déjà eu un impact sur ta situation financière ou ton moral ?",
+      "associatedBehavior": "GAMBLING",
+      "options": [
+        {
+          "id": "impact-never",
+          "text": "Jamais",
+          "value": 0
+        },
+        {
+          "id": "impact-sometimes",
+          "text": "Parfois",
+          "value": 1
+        },
+        {
+          "id": "impact-often",
+          "text": "Souvent",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "id": "q6-gambling-month-without",
+      "type": "SINGLE_CHOICE",
+      "text": "Peux-tu passer un mois sans jouer ni parier ?",
+      "associatedBehavior": "GAMBLING",
+      "options": [
+        {
+          "id": "month-easy",
+          "text": "Oui, sans difficulté",
+          "value": 0
+        },
+        {
+          "id": "month-difficult",
+          "text": "Oui, mais c'est difficile",
+          "value": 2
+        },
+        {
+          "id": "month-unable",
+          "text": "Non, j'ai du mal",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "q7-gambling-stop-ability",
+      "type": "SINGLE_CHOICE",
+      "text": "Penses-tu pouvoir arrêter complètement ?",
+      "associatedBehavior": "GAMBLING",
+      "options": [
+        {
+          "id": "stop-yes-month",
+          "text": "Oui, 1 mois ou plus",
+          "value": 0
+        },
+        {
+          "id": "stop-yes-week",
+          "text": "Oui, 1 semaine maximum",
+          "value": 1
+        },
+        {
+          "id": "stop-no",
+          "text": "Non",
+          "value": 3
+        },
+        {
+          "id": "stop-unknown",
+          "text": "Je ne sais pas",
+          "value": 2
+        }
+      ]
+    }
+  ]
+}

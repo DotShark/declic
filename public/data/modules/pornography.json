@@ -1,0 +1,194 @@
+{
+  "id": "module-pornography",
+  "name": "Pornographie / applications de rencontre",
+  "behavior": "PORNOGRAPHY",
+  "order": 9,
+  "questions": [
+    {
+      "id": "q1-pornography-frequency",
+      "type": "SINGLE_CHOICE",
+      "text": "À quelle fréquence utilises-tu ces contenus ou applications ?",
+      "associatedBehavior": "PORNOGRAPHY",
+      "options": [
+        {
+          "id": "freq-never",
+          "text": "Jamais",
+          "value": 0
+        },
+        {
+          "id": "freq-occasional",
+          "text": "Occasionnellement",
+          "value": 1
+        },
+        {
+          "id": "freq-regular",
+          "text": "Régulièrement",
+          "value": 2
+        },
+        {
+          "id": "freq-very-often",
+          "text": "Très souvent",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "q2-pornography-time",
+      "type": "SINGLE_CHOICE",
+      "text": "En moyenne, combien de temps y passes-tu par jour ?",
+      "associatedBehavior": "PORNOGRAPHY",
+      "options": [
+        {
+          "id": "time-less-30min",
+          "text": "Moins de 30 min",
+          "value": 0
+        },
+        {
+          "id": "time-30min-1h",
+          "text": "30 min - 1 h",
+          "value": 1
+        },
+        {
+          "id": "time-1-2h",
+          "text": "1-2 h",
+          "value": 2
+        },
+        {
+          "id": "time-2h-plus",
+          "text": "Plus de 2 h",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "q3-pornography-situations",
+      "type": "MULTIPLE_CHOICE",
+      "text": "Dans quelles situations les utilises-tu le plus souvent ?",
+      "associatedBehavior": "PORNOGRAPHY",
+      "options": [
+        {
+          "id": "sit-loneliness",
+          "text": "Solitude",
+          "value": 1
+        },
+        {
+          "id": "sit-boredom",
+          "text": "Ennui",
+          "value": 1
+        },
+        {
+          "id": "sit-stress",
+          "text": "Stress",
+          "value": 2
+        },
+        {
+          "id": "sit-sleep",
+          "text": "Avant de dormir",
+          "value": 1
+        },
+        {
+          "id": "sit-habit",
+          "text": "Par habitude",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "id": "q4-pornography-time-exceeded",
+      "type": "SINGLE_CHOICE",
+      "text": "As-tu déjà passé plus de temps que prévu sur ces contenus ?",
+      "associatedBehavior": "PORNOGRAPHY",
+      "options": [
+        {
+          "id": "exceeded-never",
+          "text": "Jamais",
+          "value": 0
+        },
+        {
+          "id": "exceeded-sometimes",
+          "text": "Parfois",
+          "value": 1
+        },
+        {
+          "id": "exceeded-often",
+          "text": "Souvent",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "id": "q5-pornography-day-without",
+      "type": "SINGLE_CHOICE",
+      "text": "Peux-tu passer une journée sans les utiliser ?",
+      "associatedBehavior": "PORNOGRAPHY",
+      "options": [
+        {
+          "id": "day-easy",
+          "text": "Oui, sans difficulté",
+          "value": 0
+        },
+        {
+          "id": "day-difficult",
+          "text": "Oui, mais c'est difficile",
+          "value": 2
+        },
+        {
+          "id": "day-unable",
+          "text": "Non, j'ai du mal",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "q6-pornography-loss-control",
+      "type": "SINGLE_CHOICE",
+      "text": "As-tu déjà ressenti une perte de contrôle sur cet usage ?",
+      "associatedBehavior": "PORNOGRAPHY",
+      "options": [
+        {
+          "id": "control-never",
+          "text": "Jamais",
+          "value": 0
+        },
+        {
+          "id": "control-sometimes",
+          "text": "Parfois",
+          "value": 1
+        },
+        {
+          "id": "control-often",
+          "text": "Souvent",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "id": "q7-pornography-stop-ability",
+      "type": "SINGLE_CHOICE",
+      "text": "Penses-tu pouvoir arrêter ou réduire ?",
+      "associatedBehavior": "PORNOGRAPHY",
+      "options": [
+        {
+          "id": "stop-yes-month",
+          "text": "Oui, 1 mois ou plus",
+          "value": 0
+        },
+        {
+          "id": "stop-yes-week",
+          "text": "Oui, 1 semaine maximum",
+          "value": 1
+        },
+        {
+          "id": "stop-no",
+          "text": "Non",
+          "value": 3
+        },
+        {
+          "id": "stop-unknown",
+          "text": "Je ne sais pas",
+          "value": 2
+        }
+      ]
+    }
+  ]
+}

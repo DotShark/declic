@@ -1,0 +1,207 @@
+{
+  "id": "module-cannabis",
+  "name": "Cannabis",
+  "behavior": "CANNABIS",
+  "order": 3,
+  "questions": [
+    {
+      "id": "q1-cannabis-frequency",
+      "type": "SINGLE_CHOICE",
+      "text": "À quelle fréquence consommes-tu du cannabis ?",
+      "associatedBehavior": "CANNABIS",
+      "options": [
+        {
+          "id": "freq-never",
+          "text": "Jamais",
+          "value": 0
+        },
+        {
+          "id": "freq-once-week",
+          "text": "1 fois par semaine ou moins",
+          "value": 1
+        },
+        {
+          "id": "freq-2-3-week",
+          "text": "2-3 fois par semaine",
+          "value": 2
+        },
+        {
+          "id": "freq-4-plus-week",
+          "text": "4 fois ou plus par semaine",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "q2-cannabis-quantity",
+      "type": "SINGLE_CHOICE",
+      "text": "En moyenne, combien de fois consommes-tu lors d'une journée où tu en prends ?",
+      "associatedBehavior": "CANNABIS",
+      "options": [
+        {
+          "id": "quantity-1",
+          "text": "1 fois",
+          "value": 1
+        },
+        {
+          "id": "quantity-2",
+          "text": "2 fois",
+          "value": 2
+        },
+        {
+          "id": "quantity-3-plus",
+          "text": "3 fois ou plus",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "q3-cannabis-situations",
+      "type": "MULTIPLE_CHOICE",
+      "text": "Dans quelles situations consommes-tu le plus souvent ?",
+      "associatedBehavior": "CANNABIS",
+      "options": [
+        {
+          "id": "sit-relax",
+          "text": "Pour me détendre",
+          "value": 1
+        },
+        {
+          "id": "sit-stress",
+          "text": "Pour gérer le stress ou l'anxiété",
+          "value": 2
+        },
+        {
+          "id": "sit-party",
+          "text": "En soirée",
+          "value": 1
+        },
+        {
+          "id": "sit-friends",
+          "text": "Entre amis",
+          "value": 1
+        },
+        {
+          "id": "sit-habit",
+          "text": "Par habitude",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "id": "q4-cannabis-day-without",
+      "type": "SINGLE_CHOICE",
+      "text": "Peux-tu passer une journée sans consommer de cannabis ?",
+      "associatedBehavior": "CANNABIS",
+      "options": [
+        {
+          "id": "day-easy",
+          "text": "Oui, sans difficulté",
+          "value": 0
+        },
+        {
+          "id": "day-difficult",
+          "text": "Oui, mais c'est difficile",
+          "value": 2
+        },
+        {
+          "id": "day-unable",
+          "text": "Non, j'ai du mal",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "q5-cannabis-peer-pressure",
+      "type": "SINGLE_CHOICE",
+      "text": "Le fait de voir les autres consommer te pousse-t-il à consommer aussi ?",
+      "associatedBehavior": "CANNABIS",
+      "options": [
+        {
+          "id": "peer-not",
+          "text": "Pas du tout",
+          "value": 0
+        },
+        {
+          "id": "peer-bit",
+          "text": "Un peu",
+          "value": 1
+        },
+        {
+          "id": "peer-lot",
+          "text": "Beaucoup",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "id": "q6-cannabis-pressure",
+      "type": "SINGLE_CHOICE",
+      "text": "As-tu déjà ressenti une pression pour consommer du cannabis ?",
+      "associatedBehavior": "CANNABIS",
+      "options": [
+        {
+          "id": "pressure-yes",
+          "text": "Oui",
+          "value": 1
+        },
+        {
+          "id": "pressure-no",
+          "text": "Non",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "q7-cannabis-stop-ability",
+      "type": "SINGLE_CHOICE",
+      "text": "Penses-tu pouvoir arrêter complètement le cannabis ?",
+      "associatedBehavior": "CANNABIS",
+      "options": [
+        {
+          "id": "stop-yes-month",
+          "text": "Oui, 1 mois ou plus",
+          "value": 0
+        },
+        {
+          "id": "stop-yes-week",
+          "text": "Oui, 1 semaine maximum",
+          "value": 1
+        },
+        {
+          "id": "stop-no",
+          "text": "Non",
+          "value": 3
+        },
+        {
+          "id": "stop-unknown",
+          "text": "Je ne sais pas",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "id": "q8-cannabis-regret",
+      "type": "SINGLE_CHOICE",
+      "text": "As-tu déjà regretté d'avoir consommé du cannabis ?",
+      "associatedBehavior": "CANNABIS",
+      "options": [
+        {
+          "id": "regret-never",
+          "text": "Jamais",
+          "value": 0
+        },
+        {
+          "id": "regret-sometimes",
+          "text": "Parfois",
+          "value": 1
+        },
+        {
+          "id": "regret-often",
+          "text": "Souvent",
+          "value": 2
+        }
+      ]
+    }
+  ]
+}

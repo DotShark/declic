@@ -1,0 +1,184 @@
+{
+  "id": "module-overwork",
+  "name": "Surmenage / perfectionnisme",
+  "behavior": "OVERWORK",
+  "order": 11,
+  "questions": [
+    {
+      "id": "q1-overwork-pressure",
+      "type": "SINGLE_CHOICE",
+      "text": "À quelle fréquence te sens-tu sous pression pour en faire toujours plus ?",
+      "associatedBehavior": "OVERWORK",
+      "options": [
+        {
+          "id": "pressure-never",
+          "text": "Jamais",
+          "value": 0
+        },
+        {
+          "id": "pressure-sometimes",
+          "text": "Parfois",
+          "value": 1
+        },
+        {
+          "id": "pressure-often",
+          "text": "Souvent",
+          "value": 2
+        },
+        {
+          "id": "pressure-always",
+          "text": "Presque toujours",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "q2-overwork-hours",
+      "type": "SINGLE_CHOICE",
+      "text": "Combien d'heures par jour consacres-tu aux études ou au travail ?",
+      "associatedBehavior": "OVERWORK",
+      "options": [
+        {
+          "id": "hours-less-6",
+          "text": "Moins de 6 h",
+          "value": 0
+        },
+        {
+          "id": "hours-6-8",
+          "text": "6-8 h",
+          "value": 1
+        },
+        {
+          "id": "hours-8-10",
+          "text": "8-10 h",
+          "value": 2
+        },
+        {
+          "id": "hours-10-plus",
+          "text": "Plus de 10 h",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "q3-overwork-rest-guilt",
+      "type": "SINGLE_CHOICE",
+      "text": "As-tu du mal à te reposer sans culpabiliser ?",
+      "associatedBehavior": "OVERWORK",
+      "options": [
+        {
+          "id": "guilt-never",
+          "text": "Jamais",
+          "value": 0
+        },
+        {
+          "id": "guilt-sometimes",
+          "text": "Parfois",
+          "value": 1
+        },
+        {
+          "id": "guilt-often",
+          "text": "Souvent",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "id": "q4-overwork-impact",
+      "type": "SINGLE_CHOICE",
+      "text": "Le travail ou les études empiètent-ils sur ton sommeil ou ta vie sociale ?",
+      "associatedBehavior": "OVERWORK",
+      "options": [
+        {
+          "id": "impact-never",
+          "text": "Jamais",
+          "value": 0
+        },
+        {
+          "id": "impact-sometimes",
+          "text": "Parfois",
+          "value": 1
+        },
+        {
+          "id": "impact-often",
+          "text": "Souvent",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "id": "q5-overwork-exhaustion",
+      "type": "SINGLE_CHOICE",
+      "text": "Te sens-tu épuisé(e) mentalement ?",
+      "associatedBehavior": "OVERWORK",
+      "options": [
+        {
+          "id": "exhaustion-never",
+          "text": "Jamais",
+          "value": 0
+        },
+        {
+          "id": "exhaustion-sometimes",
+          "text": "Parfois",
+          "value": 1
+        },
+        {
+          "id": "exhaustion-often",
+          "text": "Souvent",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "id": "q6-overwork-day-off",
+      "type": "SINGLE_CHOICE",
+      "text": "Peux-tu t'accorder une journée sans travailler ni étudier ?",
+      "associatedBehavior": "OVERWORK",
+      "options": [
+        {
+          "id": "day-easy",
+          "text": "Oui, sans difficulté",
+          "value": 0
+        },
+        {
+          "id": "day-difficult",
+          "text": "Oui, mais c'est difficile",
+          "value": 2
+        },
+        {
+          "id": "day-unable",
+          "text": "Non, j'ai du mal",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "q7-overwork-stop-ability",
+      "type": "SINGLE_CHOICE",
+      "text": "Penses-tu pouvoir ralentir volontairement ?",
+      "associatedBehavior": "OVERWORK",
+      "options": [
+        {
+          "id": "stop-yes-month",
+          "text": "Oui, 1 mois ou plus",
+          "value": 0
+        },
+        {
+          "id": "stop-yes-week",
+          "text": "Oui, 1 semaine maximum",
+          "value": 1
+        },
+        {
+          "id": "stop-no",
+          "text": "Non",
+          "value": 3
+        },
+        {
+          "id": "stop-unknown",
+          "text": "Je ne sais pas",
+          "value": 2
+        }
+      ]
+    }
+  ]
+}

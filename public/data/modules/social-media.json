@@ -1,0 +1,194 @@
+{
+  "id": "module-social-media",
+  "name": "Réseaux sociaux",
+  "behavior": "SOCIAL_MEDIA",
+  "order": 6,
+  "questions": [
+    {
+      "id": "q1-social-media-frequency",
+      "type": "SINGLE_CHOICE",
+      "text": "À quelle fréquence utilises-tu les réseaux sociaux ?",
+      "associatedBehavior": "SOCIAL_MEDIA",
+      "options": [
+        {
+          "id": "freq-never",
+          "text": "Jamais",
+          "value": 0
+        },
+        {
+          "id": "freq-1-2-day",
+          "text": "1-2 fois par jour",
+          "value": 1
+        },
+        {
+          "id": "freq-several-day",
+          "text": "Plusieurs fois par jour",
+          "value": 2
+        },
+        {
+          "id": "freq-continuous",
+          "text": "Presque en continu",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "q2-social-media-time",
+      "type": "SINGLE_CHOICE",
+      "text": "En moyenne, combien de temps y passes-tu par jour ?",
+      "associatedBehavior": "SOCIAL_MEDIA",
+      "options": [
+        {
+          "id": "time-less-1h",
+          "text": "Moins d'1 heure",
+          "value": 0
+        },
+        {
+          "id": "time-1-3h",
+          "text": "1-3 heures",
+          "value": 1
+        },
+        {
+          "id": "time-3-5h",
+          "text": "3-5 heures",
+          "value": 2
+        },
+        {
+          "id": "time-5h-plus",
+          "text": "Plus de 5 heures",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "q3-social-media-situations",
+      "type": "MULTIPLE_CHOICE",
+      "text": "Dans quelles situations les utilises-tu le plus souvent ?",
+      "associatedBehavior": "SOCIAL_MEDIA",
+      "options": [
+        {
+          "id": "sit-boredom",
+          "text": "Ennui",
+          "value": 1
+        },
+        {
+          "id": "sit-distract",
+          "text": "Pour me distraire",
+          "value": 1
+        },
+        {
+          "id": "sit-compare",
+          "text": "Pour me comparer aux autres",
+          "value": 2
+        },
+        {
+          "id": "sit-validation",
+          "text": "Pour recevoir des likes ou commentaires",
+          "value": 2
+        },
+        {
+          "id": "sit-sleep",
+          "text": "Avant de dormir",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "q4-social-media-day-without",
+      "type": "SINGLE_CHOICE",
+      "text": "Peux-tu passer une journée sans consulter les réseaux sociaux ?",
+      "associatedBehavior": "SOCIAL_MEDIA",
+      "options": [
+        {
+          "id": "day-easy",
+          "text": "Oui, sans difficulté",
+          "value": 0
+        },
+        {
+          "id": "day-difficult",
+          "text": "Oui, mais c'est difficile",
+          "value": 2
+        },
+        {
+          "id": "day-unable",
+          "text": "Non, j'ai du mal",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "q5-social-media-validation",
+      "type": "SINGLE_CHOICE",
+      "text": "Le regard ou la validation des autres influence-t-il ton usage ?",
+      "associatedBehavior": "SOCIAL_MEDIA",
+      "options": [
+        {
+          "id": "validation-not",
+          "text": "Pas du tout",
+          "value": 0
+        },
+        {
+          "id": "validation-bit",
+          "text": "Un peu",
+          "value": 1
+        },
+        {
+          "id": "validation-lot",
+          "text": "Beaucoup",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "id": "q6-social-media-negative-emotions",
+      "type": "SINGLE_CHOICE",
+      "text": "As-tu déjà ressenti de la frustration ou de la tristesse après avoir utilisé les réseaux sociaux ?",
+      "associatedBehavior": "SOCIAL_MEDIA",
+      "options": [
+        {
+          "id": "emotions-never",
+          "text": "Jamais",
+          "value": 0
+        },
+        {
+          "id": "emotions-sometimes",
+          "text": "Parfois",
+          "value": 1
+        },
+        {
+          "id": "emotions-often",
+          "text": "Souvent",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "id": "q7-social-media-stop-ability",
+      "type": "SINGLE_CHOICE",
+      "text": "Penses-tu pouvoir réduire ton utilisation ?",
+      "associatedBehavior": "SOCIAL_MEDIA",
+      "options": [
+        {
+          "id": "stop-yes-month",
+          "text": "Oui, 1 mois ou plus",
+          "value": 0
+        },
+        {
+          "id": "stop-yes-week",
+          "text": "Oui, 1 semaine maximum",
+          "value": 1
+        },
+        {
+          "id": "stop-no",
+          "text": "Non",
+          "value": 3
+        },
+        {
+          "id": "stop-unknown",
+          "text": "Je ne sais pas",
+          "value": 2
+        }
+      ]
+    }
+  ]
+}

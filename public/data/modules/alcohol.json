@@ -1,0 +1,207 @@
+{
+  "id": "module-alcohol",
+  "name": "Alcool",
+  "behavior": "ALCOHOL",
+  "order": 1,
+  "questions": [
+    {
+      "id": "q1-alcohol-frequency",
+      "type": "SINGLE_CHOICE",
+      "text": "À quelle fréquence consommes-tu de l'alcool ?",
+      "associatedBehavior": "ALCOHOL",
+      "options": [
+        {
+          "id": "freq-never",
+          "text": "Jamais",
+          "value": 0
+        },
+        {
+          "id": "freq-once-week",
+          "text": "1 fois par semaine ou moins",
+          "value": 1
+        },
+        {
+          "id": "freq-2-3-week",
+          "text": "2-3 fois par semaine",
+          "value": 2
+        },
+        {
+          "id": "freq-4-plus-week",
+          "text": "4 fois ou plus par semaine",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "q2-alcohol-quantity",
+      "type": "SINGLE_CHOICE",
+      "text": "En moyenne, combien de verres bois-tu lors d'une journée où tu consommes de l'alcool ?",
+      "associatedBehavior": "ALCOHOL",
+      "options": [
+        {
+          "id": "quantity-1-2",
+          "text": "1-2",
+          "value": 1
+        },
+        {
+          "id": "quantity-3-4",
+          "text": "3-4",
+          "value": 2
+        },
+        {
+          "id": "quantity-5-plus",
+          "text": "5 ou plus",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "q3-alcohol-situations",
+      "type": "MULTIPLE_CHOICE",
+      "text": "Dans quelles situations te bois-tu le plus souvent ?",
+      "associatedBehavior": "ALCOHOL",
+      "options": [
+        {
+          "id": "sit-parties",
+          "text": "Soirées / fêtes",
+          "value": 1
+        },
+        {
+          "id": "sit-family",
+          "text": "Repas en famille",
+          "value": 1
+        },
+        {
+          "id": "sit-friends",
+          "text": "Entre amis",
+          "value": 1
+        },
+        {
+          "id": "sit-relax",
+          "text": "Pour me détendre",
+          "value": 2
+        },
+        {
+          "id": "sit-stress",
+          "text": "Quand je me sens stressé(e) ou triste",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "id": "q4-alcohol-party-without",
+      "type": "SINGLE_CHOICE",
+      "text": "Peux-tu participer à une soirée sans boire d'alcool ?",
+      "associatedBehavior": "ALCOHOL",
+      "options": [
+        {
+          "id": "party-easy",
+          "text": "Oui, sans difficulté",
+          "value": 0
+        },
+        {
+          "id": "party-difficult",
+          "text": "Oui, mais c'est difficile",
+          "value": 2
+        },
+        {
+          "id": "party-unable",
+          "text": "Non, j'ai du mal",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "q5-alcohol-peer-pressure",
+      "type": "SINGLE_CHOICE",
+      "text": "Le fait de voir les autres boire te pousse-t-il à boire aussi ?",
+      "associatedBehavior": "ALCOHOL",
+      "options": [
+        {
+          "id": "peer-not",
+          "text": "Pas du tout",
+          "value": 0
+        },
+        {
+          "id": "peer-bit",
+          "text": "Un peu",
+          "value": 1
+        },
+        {
+          "id": "peer-lot",
+          "text": "Beaucoup",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "id": "q6-alcohol-pressure",
+      "type": "SINGLE_CHOICE",
+      "text": "As-tu déjà ressenti une pression pour boire de l'alcool ?",
+      "associatedBehavior": "ALCOHOL",
+      "options": [
+        {
+          "id": "pressure-yes",
+          "text": "Oui",
+          "value": 1
+        },
+        {
+          "id": "pressure-no",
+          "text": "Non",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "q7-alcohol-stop-ability",
+      "type": "SINGLE_CHOICE",
+      "text": "Penses-tu pouvoir arrêter complètement l'alcool ?",
+      "associatedBehavior": "ALCOHOL",
+      "options": [
+        {
+          "id": "stop-yes-month",
+          "text": "Oui, 1 mois ou plus",
+          "value": 0
+        },
+        {
+          "id": "stop-yes-week",
+          "text": "Oui, 1 semaine maximum",
+          "value": 1
+        },
+        {
+          "id": "stop-no",
+          "text": "Non",
+          "value": 3
+        },
+        {
+          "id": "stop-unknown",
+          "text": "Je ne sais pas",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "id": "q8-alcohol-regret",
+      "type": "SINGLE_CHOICE",
+      "text": "As-tu déjà regretté d'avoir bu trop d'alcool ?",
+      "associatedBehavior": "ALCOHOL",
+      "options": [
+        {
+          "id": "regret-never",
+          "text": "Jamais",
+          "value": 0
+        },
+        {
+          "id": "regret-sometimes",
+          "text": "Parfois",
+          "value": 1
+        },
+        {
+          "id": "regret-often",
+          "text": "Souvent",
+          "value": 2
+        }
+      ]
+    }
+  ]
+}

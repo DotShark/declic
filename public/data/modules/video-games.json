@@ -1,0 +1,194 @@
+{
+  "id": "module-video-games",
+  "name": "Jeux vidéo",
+  "behavior": "VIDEO_GAMES",
+  "order": 7,
+  "questions": [
+    {
+      "id": "q1-video-games-frequency",
+      "type": "SINGLE_CHOICE",
+      "text": "À quelle fréquence joues-tu aux jeux vidéo ?",
+      "associatedBehavior": "VIDEO_GAMES",
+      "options": [
+        {
+          "id": "freq-never",
+          "text": "Jamais",
+          "value": 0
+        },
+        {
+          "id": "freq-1-2-week",
+          "text": "1-2 fois par semaine",
+          "value": 1
+        },
+        {
+          "id": "freq-several-week",
+          "text": "Plusieurs fois par semaine",
+          "value": 2
+        },
+        {
+          "id": "freq-daily",
+          "text": "Tous les jours",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "q2-video-games-time",
+      "type": "SINGLE_CHOICE",
+      "text": "En moyenne, combien de temps joues-tu lors d'une journée de jeu ?",
+      "associatedBehavior": "VIDEO_GAMES",
+      "options": [
+        {
+          "id": "time-less-1h",
+          "text": "Moins d'1 heure",
+          "value": 0
+        },
+        {
+          "id": "time-1-3h",
+          "text": "1-3 heures",
+          "value": 1
+        },
+        {
+          "id": "time-3-5h",
+          "text": "3-5 heures",
+          "value": 2
+        },
+        {
+          "id": "time-5h-plus",
+          "text": "Plus de 5 heures",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "q3-video-games-situations",
+      "type": "MULTIPLE_CHOICE",
+      "text": "Dans quelles situations joues-tu le plus souvent ?",
+      "associatedBehavior": "VIDEO_GAMES",
+      "options": [
+        {
+          "id": "sit-relax",
+          "text": "Pour me détendre",
+          "value": 1
+        },
+        {
+          "id": "sit-boredom",
+          "text": "Pour éviter l'ennui",
+          "value": 1
+        },
+        {
+          "id": "sit-escape",
+          "text": "Pour oublier mes problèmes",
+          "value": 2
+        },
+        {
+          "id": "sit-night",
+          "text": "La nuit",
+          "value": 2
+        },
+        {
+          "id": "sit-alone",
+          "text": "Quand je suis seul(e)",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "q4-video-games-impact",
+      "type": "SINGLE_CHOICE",
+      "text": "Les jeux vidéo ont-ils déjà impacté ton sommeil ou tes obligations ?",
+      "associatedBehavior": "VIDEO_GAMES",
+      "options": [
+        {
+          "id": "impact-never",
+          "text": "Jamais",
+          "value": 0
+        },
+        {
+          "id": "impact-sometimes",
+          "text": "Parfois",
+          "value": 1
+        },
+        {
+          "id": "impact-often",
+          "text": "Souvent",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "id": "q5-video-games-irritability",
+      "type": "SINGLE_CHOICE",
+      "text": "Te sens-tu irritable ou frustré(e) quand tu ne peux pas jouer ?",
+      "associatedBehavior": "VIDEO_GAMES",
+      "options": [
+        {
+          "id": "irritability-never",
+          "text": "Jamais",
+          "value": 0
+        },
+        {
+          "id": "irritability-sometimes",
+          "text": "Parfois",
+          "value": 1
+        },
+        {
+          "id": "irritability-often",
+          "text": "Souvent",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "id": "q6-video-games-day-without",
+      "type": "SINGLE_CHOICE",
+      "text": "Peux-tu passer une journée sans jouer ?",
+      "associatedBehavior": "VIDEO_GAMES",
+      "options": [
+        {
+          "id": "day-easy",
+          "text": "Oui, sans difficulté",
+          "value": 0
+        },
+        {
+          "id": "day-difficult",
+          "text": "Oui, mais c'est difficile",
+          "value": 2
+        },
+        {
+          "id": "day-unable",
+          "text": "Non, j'ai du mal",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "q7-video-games-stop-ability",
+      "type": "SINGLE_CHOICE",
+      "text": "Penses-tu pouvoir arrêter ou réduire ?",
+      "associatedBehavior": "VIDEO_GAMES",
+      "options": [
+        {
+          "id": "stop-yes-month",
+          "text": "Oui, 1 mois ou plus",
+          "value": 0
+        },
+        {
+          "id": "stop-yes-week",
+          "text": "Oui, 1 semaine maximum",
+          "value": 1
+        },
+        {
+          "id": "stop-no",
+          "text": "Non",
+          "value": 3
+        },
+        {
+          "id": "stop-unknown",
+          "text": "Je ne sais pas",
+          "value": 2
+        }
+      ]
+    }
+  ]
+}

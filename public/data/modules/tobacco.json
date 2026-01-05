@@ -1,0 +1,230 @@
+{
+  "id": "module-tobacco",
+  "name": "Tabac",
+  "behavior": "TOBACCO",
+  "order": 2,
+  "questions": [
+    {
+      "id": "q1-tobacco-current",
+      "type": "SINGLE_CHOICE",
+      "text": "Fumes-tu actuellement ?",
+      "associatedBehavior": "TOBACCO",
+      "options": [
+        {
+          "id": "current-no",
+          "text": "Non",
+          "value": 0
+        },
+        {
+          "id": "current-occasional",
+          "text": "Oui, occasionnellement",
+          "value": 1
+        },
+        {
+          "id": "current-regular",
+          "text": "Oui, régulièrement",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "id": "q2-tobacco-quantity",
+      "type": "SINGLE_CHOICE",
+      "text": "Si oui, combien de cigarettes fumes-tu en moyenne par jour ?",
+      "associatedBehavior": "TOBACCO",
+      "options": [
+        {
+          "id": "quantity-1-5",
+          "text": "1-5",
+          "value": 1
+        },
+        {
+          "id": "quantity-6-10",
+          "text": "6-10",
+          "value": 2
+        },
+        {
+          "id": "quantity-11-20",
+          "text": "11-20",
+          "value": 3
+        },
+        {
+          "id": "quantity-20-plus",
+          "text": "Plus de 20",
+          "value": 4
+        }
+      ]
+    },
+    {
+      "id": "q3-tobacco-frequency",
+      "type": "SINGLE_CHOICE",
+      "text": "À quelle fréquence fumes-tu ?",
+      "associatedBehavior": "TOBACCO",
+      "options": [
+        {
+          "id": "freq-daily",
+          "text": "Tous les jours",
+          "value": 3
+        },
+        {
+          "id": "freq-weekly",
+          "text": "Plusieurs fois par semaine",
+          "value": 2
+        },
+        {
+          "id": "freq-rarely",
+          "text": "Rarement",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "q4-tobacco-situations",
+      "type": "MULTIPLE_CHOICE",
+      "text": "Dans quelles situations fumes-tu le plus souvent ?",
+      "associatedBehavior": "TOBACCO",
+      "options": [
+        {
+          "id": "sit-stress",
+          "text": "Stress",
+          "value": 2
+        },
+        {
+          "id": "sit-boredom",
+          "text": "Ennui",
+          "value": 1
+        },
+        {
+          "id": "sit-party",
+          "text": "En soirée",
+          "value": 1
+        },
+        {
+          "id": "sit-friends",
+          "text": "Avec des amis",
+          "value": 1
+        },
+        {
+          "id": "sit-after-meal",
+          "text": "Après un repas",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "q5-tobacco-party-without",
+      "type": "SINGLE_CHOICE",
+      "text": "Peux-tu passer une soirée sans fumer ?",
+      "associatedBehavior": "TOBACCO",
+      "options": [
+        {
+          "id": "party-easy",
+          "text": "Oui, sans difficulté",
+          "value": 0
+        },
+        {
+          "id": "party-difficult",
+          "text": "Oui, mais difficilement",
+          "value": 2
+        },
+        {
+          "id": "party-unable",
+          "text": "Non",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "q6-tobacco-peer-influence",
+      "type": "SINGLE_CHOICE",
+      "text": "Le fait de voir d'autres personnes fumer te donne-t-il envie de fumer ?",
+      "associatedBehavior": "TOBACCO",
+      "options": [
+        {
+          "id": "peer-not",
+          "text": "Pas du tout",
+          "value": 0
+        },
+        {
+          "id": "peer-bit",
+          "text": "Un peu",
+          "value": 1
+        },
+        {
+          "id": "peer-lot",
+          "text": "Beaucoup",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "id": "q7-tobacco-quit-attempt",
+      "type": "SINGLE_CHOICE",
+      "text": "As-tu déjà essayé d'arrêter de fumer ?",
+      "associatedBehavior": "TOBACCO",
+      "options": [
+        {
+          "id": "quit-yes",
+          "text": "Oui",
+          "value": 1
+        },
+        {
+          "id": "quit-no",
+          "text": "Non",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "q8-tobacco-stop-ability",
+      "type": "SINGLE_CHOICE",
+      "text": "Penses-tu pouvoir arrêter de fumer ?",
+      "associatedBehavior": "TOBACCO",
+      "options": [
+        {
+          "id": "stop-yes-month",
+          "text": "Oui, 1 mois ou plus",
+          "value": 0
+        },
+        {
+          "id": "stop-yes-week",
+          "text": "Oui, 1 semaine maximum",
+          "value": 1
+        },
+        {
+          "id": "stop-no",
+          "text": "Non",
+          "value": 3
+        },
+        {
+          "id": "stop-unknown",
+          "text": "Je ne sais pas",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "id": "q9-tobacco-health-impact",
+      "type": "SINGLE_CHOICE",
+      "text": "Selon toi, le tabac a-t-il un impact sur ta santé ou ton quotidien ?",
+      "associatedBehavior": "TOBACCO",
+      "options": [
+        {
+          "id": "impact-yes",
+          "text": "Oui",
+          "value": 1
+        },
+        {
+          "id": "impact-no",
+          "text": "Non",
+          "value": 0
+        },
+        {
+          "id": "impact-unknown",
+          "text": "Je ne sais pas",
+          "value": 0
+        }
+      ]
+    }
+  ]
+}

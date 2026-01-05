@@ -1,0 +1,207 @@
+{
+  "id": "module-party-drugs",
+  "name": "Drogues festives",
+  "behavior": "PARTY_DRUGS",
+  "order": 5,
+  "questions": [
+    {
+      "id": "q1-party-drugs-frequency",
+      "type": "SINGLE_CHOICE",
+      "text": "À quelle fréquence consommes-tu des drogues festives ?",
+      "associatedBehavior": "PARTY_DRUGS",
+      "options": [
+        {
+          "id": "freq-never",
+          "text": "Jamais",
+          "value": 0
+        },
+        {
+          "id": "freq-rarely",
+          "text": "Rarement",
+          "value": 1
+        },
+        {
+          "id": "freq-occasional",
+          "text": "Occasionnellement",
+          "value": 2
+        },
+        {
+          "id": "freq-regular",
+          "text": "Régulièrement",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "q2-party-drugs-quantity",
+      "type": "SINGLE_CHOICE",
+      "text": "En moyenne, combien de prises lors d'une soirée ?",
+      "associatedBehavior": "PARTY_DRUGS",
+      "options": [
+        {
+          "id": "quantity-1",
+          "text": "1",
+          "value": 1
+        },
+        {
+          "id": "quantity-2",
+          "text": "2",
+          "value": 2
+        },
+        {
+          "id": "quantity-3-plus",
+          "text": "3 ou plus",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "q3-party-drugs-situations",
+      "type": "MULTIPLE_CHOICE",
+      "text": "Dans quelles situations consommes-tu le plus souvent ?",
+      "associatedBehavior": "PARTY_DRUGS",
+      "options": [
+        {
+          "id": "sit-parties",
+          "text": "Soirées",
+          "value": 1
+        },
+        {
+          "id": "sit-festivals",
+          "text": "Festivals",
+          "value": 1
+        },
+        {
+          "id": "sit-friends",
+          "text": "Entre amis",
+          "value": 1
+        },
+        {
+          "id": "sit-endurance",
+          "text": "Pour tenir plus longtemps",
+          "value": 2
+        },
+        {
+          "id": "sit-comfort",
+          "text": "Pour me sentir plus à l'aise",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "id": "q4-party-drugs-party-without",
+      "type": "SINGLE_CHOICE",
+      "text": "Peux-tu participer à une soirée sans en consommer ?",
+      "associatedBehavior": "PARTY_DRUGS",
+      "options": [
+        {
+          "id": "party-easy",
+          "text": "Oui, sans difficulté",
+          "value": 0
+        },
+        {
+          "id": "party-difficult",
+          "text": "Oui, mais c'est difficile",
+          "value": 2
+        },
+        {
+          "id": "party-unable",
+          "text": "Non, j'ai du mal",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "q5-party-drugs-peer-pressure",
+      "type": "SINGLE_CHOICE",
+      "text": "Le fait de voir les autres consommer te pousse-t-il à consommer aussi ?",
+      "associatedBehavior": "PARTY_DRUGS",
+      "options": [
+        {
+          "id": "peer-not",
+          "text": "Pas du tout",
+          "value": 0
+        },
+        {
+          "id": "peer-bit",
+          "text": "Un peu",
+          "value": 1
+        },
+        {
+          "id": "peer-lot",
+          "text": "Beaucoup",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "id": "q6-party-drugs-pressure",
+      "type": "SINGLE_CHOICE",
+      "text": "As-tu déjà ressenti une pression pour consommer en contexte festif ?",
+      "associatedBehavior": "PARTY_DRUGS",
+      "options": [
+        {
+          "id": "pressure-yes",
+          "text": "Oui",
+          "value": 1
+        },
+        {
+          "id": "pressure-no",
+          "text": "Non",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "q7-party-drugs-stop-ability",
+      "type": "SINGLE_CHOICE",
+      "text": "Penses-tu pouvoir arrêter complètement ?",
+      "associatedBehavior": "PARTY_DRUGS",
+      "options": [
+        {
+          "id": "stop-yes-month",
+          "text": "Oui, 1 mois ou plus",
+          "value": 0
+        },
+        {
+          "id": "stop-yes-week",
+          "text": "Oui, 1 semaine maximum",
+          "value": 1
+        },
+        {
+          "id": "stop-no",
+          "text": "Non",
+          "value": 3
+        },
+        {
+          "id": "stop-unknown",
+          "text": "Je ne sais pas",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "id": "q8-party-drugs-regret",
+      "type": "SINGLE_CHOICE",
+      "text": "As-tu déjà regretté une consommation en soirée ?",
+      "associatedBehavior": "PARTY_DRUGS",
+      "options": [
+        {
+          "id": "regret-never",
+          "text": "Jamais",
+          "value": 0
+        },
+        {
+          "id": "regret-sometimes",
+          "text": "Parfois",
+          "value": 1
+        },
+        {
+          "id": "regret-often",
+          "text": "Souvent",
+          "value": 2
+        }
+      ]
+    }
+  ]
+}
