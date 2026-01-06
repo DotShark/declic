@@ -50,37 +50,29 @@ export interface AnswerOption {
 }
 
 /**
- * Base question structure
+ * Behavior-related question
  */
-interface BaseQuestion {
+export interface BehaviorQuestion {
   id: string
   type: QuestionType
   text: string
   subtitle?: string
   options: AnswerOption[]
-}
-
-/**
- * Motivation question (Q1) - not tied to any behavior
- */
-export interface MotivationQuestion extends BaseQuestion {
-}
-
-/**
- * Behavior-related question
- */
-export interface BehaviorQuestion extends BaseQuestion {
   associatedBehavior: Behavior
 }
-
-/**
- * Union of all question types
- */
-export type Question = MotivationQuestion | BehaviorQuestion
 
 // ============================================
 // MODULES & SURVEY STRUCTURE
 // ============================================
+
+/**
+ * Reference to a module file in survey-config.json
+ */
+export interface ModuleReference {
+  behavior: Behavior
+  name: string
+  file: string
+}
 
 /**
  * Module representing one behavior
@@ -91,17 +83,15 @@ export interface SurveyModule {
   name: string
   behavior: Behavior
   questions: BehaviorQuestion[]
-  order: number
 }
 
 /**
- * Complete survey structure
+ * Survey configuration from survey-config.json
  */
-export interface Survey {
+export interface SurveyConfig {
   id: string
   title: string
   description: string
-  motivationQuestion: MotivationQuestion
-  modules: SurveyModule[]
   estimatedDurationMinutes: number
+  modules: ModuleReference[]
 }

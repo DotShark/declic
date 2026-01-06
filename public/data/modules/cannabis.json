@@ -2,7 +2,6 @@
   "id": "module-cannabis",
   "name": "Cannabis",
   "behavior": "CANNABIS",
-  "order": 3,
   "questions": [
     {
       "id": "q1-cannabis-frequency",

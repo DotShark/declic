@@ -2,7 +2,6 @@
   "id": "module-medication",
   "name": "Médicaments détournés",
   "behavior": "MEDICATION",
-  "order": 4,
   "questions": [
     {
       "id": "q1-medication-frequency",

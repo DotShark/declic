@@ -2,7 +2,6 @@
   "id": "module-social-media",
   "name": "Réseaux sociaux",
   "behavior": "SOCIAL_MEDIA",
-  "order": 6,
   "questions": [
     {
       "id": "q1-social-media-frequency",

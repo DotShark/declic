@@ -2,7 +2,6 @@
   "id": "module-tobacco",
   "name": "Tabac",
   "behavior": "TOBACCO",
-  "order": 2,
   "questions": [
     {
       "id": "q1-tobacco-current",

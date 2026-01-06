@@ -2,7 +2,6 @@
   "id": "module-pornography",
   "name": "Pornographie / applications de rencontre",
   "behavior": "PORNOGRAPHY",
-  "order": 9,
   "questions": [
     {
       "id": "q1-pornography-frequency",
