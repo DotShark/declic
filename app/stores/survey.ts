@@ -30,8 +30,9 @@ export const useSurveyStore = defineStore('survey', {
       this.error = null
 
       try {
-        const { origin } = useRequestURL()
-        const url = `${origin}/data/survey-config.json`
+        const config = useRuntimeConfig()
+        const baseUrl = config.public.url.length > 0 ? config.public.url : useRequestURL().origin
+        const url = `${baseUrl}/data/survey-config.json`
         this.config = await $fetch(url)
       } catch (err) {
         this.error = err instanceof Error ? err.message : 'Unknown error occurred'
