@@ -1,11 +1,3 @@
-<script setup lang="ts">
-const surveyStore = useSurveyStore()
-
-onMounted(() => {
-  surveyStore.loadConfig()
-})
-</script>
-
 <template>
   <main class="flex flex-col items-center justify-center min-h-screen p-6 gap-8">
     <div v-if="surveyStore.error" class="flex flex-col items-center gap-4" role="alert" aria-live="assertive">
@@ -36,6 +28,45 @@ onMounted(() => {
       >
         Commencer
       </NuxtLink>
+
+      <button 
+        @click="openPopup"
+        class="mt-4 px-8 py-3 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-600 transition-colors cursor-pointer inline-block"
+        aria-label="Récupérer vos résultats"
+      >
+        Récupérer vos résultats
+      </button>
+
+      <EmailPopup 
+      :isOpen="popupOpen" 
+      @close="popupOpen = false" 
+      @send="handleEmailSend" 
+    />
     </div>
   </main>
 </template>
+
+<script setup lang="ts">
+import { ref, onMounted } from 'vue';
+import EmailPopup from '../components/EmailPopup.vue';
+
+const surveyStore = useSurveyStore()
+
+onMounted(() => {
+  surveyStore.loadConfig()
+})
+
+const popupOpen = ref(false);
+
+const openPopup = () => {
+  popupOpen.value = true;
+};
+
+const handleEmailSend = (email: string) => {
+  console.log('Email sent to:', email);
+}
+
+onMounted(() => {
+  surveyStore.loadConfig();
+});
+</script>
