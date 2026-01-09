@@ -2,6 +2,7 @@
   "id": "module-video-games",
   "name": "Jeux vidéo",
   "behavior": "VIDEO_GAMES",
+  "icon": "lucide:gamepad-2",
   "questions": [
     {
       "id": "q1-video-games-frequency",

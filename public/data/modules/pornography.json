@@ -2,6 +2,7 @@
   "id": "module-pornography",
   "name": "Pornographie / applications de rencontre",
   "behavior": "PORNOGRAPHY",
+  "icon": "lucide:heart",
   "questions": [
     {
       "id": "q1-pornography-frequency",

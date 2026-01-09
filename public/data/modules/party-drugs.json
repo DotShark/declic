@@ -2,6 +2,7 @@
   "id": "module-party-drugs",
   "name": "Drogues festives",
   "behavior": "PARTY_DRUGS",
+  "icon": "lucide:sparkles",
   "questions": [
     {
       "id": "q1-party-drugs-frequency",

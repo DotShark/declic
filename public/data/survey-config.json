@@ -7,57 +7,68 @@
     {
       "behavior": "ALCOHOL",
       "name": "Alcool",
-      "file": "modules/alcohol.json"
+      "file": "modules/alcohol.json",
+      "icon": "lucide:wine"
     },
     {
       "behavior": "TOBACCO",
       "name": "Tabac",
-      "file": "modules/tobacco.json"
+      "file": "modules/tobacco.json",
+      "icon": "lucide:cigarette"
     },
     {
       "behavior": "CANNABIS",
       "name": "Cannabis",
-      "file": "modules/cannabis.json"
+      "file": "modules/cannabis.json",
+      "icon": "lucide:leaf"
     },
     {
       "behavior": "MEDICATION",
       "name": "Médicaments détournés",
-      "file": "modules/medication.json"
+      "file": "modules/medication.json",
+      "icon": "lucide:pill"
     },
     {
       "behavior": "PARTY_DRUGS",
       "name": "Drogues festives",
-      "file": "modules/party-drugs.json"
+      "file": "modules/party-drugs.json",
+      "icon": "lucide:sparkles"
     },
     {
       "behavior": "SOCIAL_MEDIA",
       "name": "Réseaux sociaux",
-      "file": "modules/social-media.json"
+      "file": "modules/social-media.json",
+      "icon": "lucide:smartphone"
     },
     {
       "behavior": "VIDEO_GAMES",
       "name": "Jeux vidéo",
-      "file": "modules/video-games.json"
+      "file": "modules/video-games.json",
+      "icon": "lucide:gamepad-2"
     },
     {
       "behavior": "GAMBLING",
       "name": "Paris sportifs / jeux d'argent",
-      "file": "modules/gambling.json"
+      "file": "modules/gambling.json",
+      "icon": "lucide:dice-5"
     },
     {
       "behavior": "PORNOGRAPHY",
       "name": "Pornographie / applications de rencontre",
-      "file": "modules/pornography.json"
+      "file": "modules/pornography.json",
+      "icon": "lucide:heart"
     },
     {
       "behavior": "SNACKING",
       "name": "Grignotage / alimentation compulsive",
-      "file": "modules/snacking.json"
+      "file": "modules/snacking.json",
+      "icon": "lucide:cookie"
     },
     {
       "behavior": "OVERWORK",
       "name": "Surmenage / perfectionnisme",
-      "file": "modules/overwork.json"
+      "file": "modules/overwork.json",
+      "icon": "lucide:briefcase"
     }
   ]
 }

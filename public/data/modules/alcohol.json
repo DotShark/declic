@@ -2,6 +2,7 @@
   "id": "module-alcohol",
   "name": "Alcool",
   "behavior": "ALCOHOL",
+  "icon": "lucide:wine",
   "questions": [
     {
       "id": "q1-alcohol-frequency",

@@ -2,6 +2,7 @@
   "id": "module-overwork",
   "name": "Surmenage / perfectionnisme",
   "behavior": "OVERWORK",
+  "icon": "lucide:briefcase",
   "questions": [
     {
       "id": "q1-overwork-pressure",

@@ -2,6 +2,7 @@
   "id": "module-snacking",
   "name": "Grignotage / alimentation compulsive",
   "behavior": "SNACKING",
+  "icon": "lucide:cookie",
   "questions": [
     {
       "id": "q1-snacking-frequency",

@@ -72,6 +72,7 @@ export interface ModuleReference {
   behavior: Behavior
   name: string
   file: string
+  icon: string
 }
 
 /**
@@ -82,6 +83,7 @@ export interface SurveyModule {
   id: string
   name: string
   behavior: Behavior
+  icon: string
   questions: BehaviorQuestion[]
 }
 

@@ -2,6 +2,7 @@
   "id": "module-medication",
   "name": "Médicaments détournés",
   "behavior": "MEDICATION",
+  "icon": "lucide:pill",
   "questions": [
     {
       "id": "q1-medication-frequency",

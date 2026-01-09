@@ -2,6 +2,7 @@
   "id": "module-cannabis",
   "name": "Cannabis",
   "behavior": "CANNABIS",
+  "icon": "lucide:leaf",
   "questions": [
     {
       "id": "q1-cannabis-frequency",
