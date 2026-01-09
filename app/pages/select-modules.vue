@@ -2,8 +2,9 @@
 const surveyStore = useSurveyStore()
 const router = useRouter()
 
-// SSR-safe config loading
-await callOnce('survey-config', () => surveyStore.loadConfig())
+onMounted(() => {
+  surveyStore.loadConfig()
+})
 
 // Toggle handler
 const handleToggle = (behavior: Behavior) => {
