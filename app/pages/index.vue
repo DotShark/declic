@@ -1,9 +1,7 @@
 <script setup lang="ts">
 const surveyStore = useSurveyStore()
 
-onMounted(() => {
-  surveyStore.loadConfig()
-})
+await callOnce('survey-config', () => surveyStore.loadConfig())
 </script>
 
 <template>
