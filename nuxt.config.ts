@@ -16,6 +16,11 @@ export default defineNuxtConfig({
     '@nuxt/icon',
     '@pinia/nuxt',
   ],
+  runtimeConfig: {
+    public: {
+      url: '',
+    },
+  },
   css: ['./app/assets/css/main.css'],
   fonts: {
     families: [

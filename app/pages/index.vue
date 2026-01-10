@@ -4,10 +4,6 @@ import EmailModal from '~/components/EmailModal.vue';
 
 const surveyStore = useSurveyStore()
 
-onMounted(() => {
-  surveyStore.loadConfig()
-})
-
 const emailModal = ref<InstanceType<typeof EmailModal> | null>(null)
 
 const handleOpenModal = () => {
@@ -15,6 +11,7 @@ const handleOpenModal = () => {
     emailModal.value.openModal()
   }
 }
+await callOnce('survey-config', () => surveyStore.loadConfig())
 </script>
 
 <template>

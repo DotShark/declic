@@ -2,9 +2,7 @@
 const surveyStore = useSurveyStore()
 const router = useRouter()
 
-onMounted(() => {
-  surveyStore.loadConfig()
-})
+await callOnce('survey-config', () => surveyStore.loadConfig())
 
 // Toggle handler
 const handleToggle = (behavior: Behavior) => {
