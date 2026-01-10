@@ -8,7 +8,7 @@ export const useSurveyStore = defineStore('survey', {
   state: (): SurveyState => ({
     config: null,
     error: null,
-    selectedBehaviors: new Set()
+    selectedBehaviors: new Set(),
   }),
 
   getters: {
@@ -31,11 +31,15 @@ export const useSurveyStore = defineStore('survey', {
 
       try {
         const config = useRuntimeConfig()
-        const baseUrl = config.public.url.length > 0 ? config.public.url : useRequestURL().origin
+        const baseUrl =
+          config.public.url.length > 0
+            ? config.public.url
+            : useRequestURL().origin
         const url = `${baseUrl}/data/survey-config.json`
         this.config = await $fetch(url)
       } catch (err) {
-        this.error = err instanceof Error ? err.message : 'Unknown error occurred'
+        this.error =
+          err instanceof Error ? err.message : 'Unknown error occurred'
         console.error('Error loading survey config:', err)
       }
     },
@@ -51,5 +55,5 @@ export const useSurveyStore = defineStore('survey', {
     clearSelection() {
       this.selectedBehaviors.clear()
     },
-  }
+  },
 })
