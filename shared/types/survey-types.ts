@@ -5,7 +5,7 @@
 /**
  * Types of addictive behaviors tracked by the platform
  */
-export type Behavior = 
+export type Behavior =
   | 'ALCOHOL'
   | 'TOBACCO'
   | 'CANNABIS'
@@ -21,15 +21,13 @@ export type Behavior =
 /**
  * Question types for UI rendering
  */
-export type QuestionType = 
-  | 'SINGLE_CHOICE'
-  | 'MULTIPLE_CHOICE'
+export type QuestionType = 'SINGLE_CHOICE' | 'MULTIPLE_CHOICE'
 
 /**
  * User's motivation for taking the survey (Q1)
  * Used to adapt the tone and urgency of recommendations
  */
-export type UserMotivation = 
+export type UserMotivation =
   | 'CURIOSITY'
   | 'QUESTIONING_HABITS'
   | 'CONCERNED_RELATIVE'
