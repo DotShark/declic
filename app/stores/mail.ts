@@ -3,7 +3,7 @@ import emailjs from '@emailjs/browser'
 
 export const useMailStore = defineStore('mail', () => {
   const config = useRuntimeConfig()
-  
+
   const email = ref('')
   const statusMessage = ref('')
   const isSending = ref(false)
@@ -20,7 +20,7 @@ export const useMailStore = defineStore('mail', () => {
 
   const sendEmail = async () => {
     if (!isEmailValid.value) return
-    
+
     isSending.value = true
     statusMessage.value = ''
 
@@ -35,9 +35,9 @@ export const useMailStore = defineStore('mail', () => {
         config.public.mailServiceId as string,
         config.public.mailTemplateId as string,
         templateParams,
-        config.public.mailPublicKey as string
+        config.public.mailPublicKey as string,
       )
-      
+
       statusMessage.value = 'Email sent successfully!'
       return true
     } catch (error) {
@@ -55,6 +55,6 @@ export const useMailStore = defineStore('mail', () => {
     isSending,
     isEmailValid,
     sendEmail,
-    resetForm
+    resetForm,
   }
 })

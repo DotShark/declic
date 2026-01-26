@@ -1,4 +1,4 @@
-import tailwindcss from '@tailwindcss/vite';
+import tailwindcss from '@tailwindcss/vite'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -6,21 +6,13 @@ export default defineNuxtConfig({
     public: {
       mailServiceId: '',
       mailTemplateId: '',
-      mailPublicKey: ''
-    }
-  },
-  compatibilityDate: '2025-07-15',
-  devtools: { enabled: true },
-  modules: [
-    '@nuxt/fonts',
-    '@nuxt/icon',
-    '@pinia/nuxt',
-  ],
-  runtimeConfig: {
-    public: {
+      mailPublicKey: '',
       url: '',
     },
   },
+  compatibilityDate: '2025-07-15',
+  devtools: { enabled: true },
+  modules: ['@nuxt/fonts', '@nuxt/icon', '@pinia/nuxt', '@nuxt/eslint'],
   css: ['./app/assets/css/main.css'],
   fonts: {
     families: [
@@ -37,8 +29,6 @@ export default defineNuxtConfig({
     ],
   },
   vite: {
-    plugins: [
-      tailwindcss(),
-    ]
-  }
+    plugins: [tailwindcss()],
+  },
 })

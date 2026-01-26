@@ -25,6 +25,7 @@ The platform addresses a critical gap: while addiction support services exist, s
 ## 📋 Addictions Covered
 
 ### Substance-Related
+
 - Alcohol (binge drinking, regular excessive use)
 - Cannabis and other drugs
 - Tobacco and vaping
@@ -32,6 +33,7 @@ The platform addresses a critical gap: while addiction support services exist, s
 - Party drugs (MDMA, cocaine, etc.)
 
 ### Behavioral
+
 - Social media and smartphone overuse
 - Video gaming
 - Gambling and sports betting
