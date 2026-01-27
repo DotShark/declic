@@ -2,6 +2,9 @@ interface SurveyState {
   config: SurveyConfig | null
   error: string | null
   selectedBehaviors: Set<Behavior>
+  modules: SurveyModule[]
+  currentBehavior: Behavior | null
+  currentQuestionIndex: number
 }
 
 export const useSurveyStore = defineStore('survey', {
@@ -9,6 +12,9 @@ export const useSurveyStore = defineStore('survey', {
     config: null,
     error: null,
     selectedBehaviors: new Set(),
+    modules: [],
+    currentBehavior: null,
+    currentQuestionIndex: 0,
   }),
 
   getters: {
@@ -22,6 +28,14 @@ export const useSurveyStore = defineStore('survey', {
 
     selectedCount(): number {
       return this.selectedBehaviors.size
+    },
+
+    currentModule(): SurveyModule | undefined {
+      return this.modules.find((m) => m.behavior === this.currentBehavior)
+    },
+
+    currentQuestion(): BehaviorQuestion | undefined {
+      return this.currentModule?.questions[this.currentQuestionIndex]
     },
   },
 
@@ -54,6 +68,41 @@ export const useSurveyStore = defineStore('survey', {
 
     clearSelection() {
       this.selectedBehaviors.clear()
+    },
+
+    setCurrentBehavior(behavior: Behavior | null) {
+      this.currentBehavior = behavior
+    },
+
+    setCurrentQuestionIndex(index: number) {
+      this.currentQuestionIndex = index
+    },
+
+    async loadNextModule(): Promise<SurveyModule | null> {
+      if (!this.config) return null
+
+      const loadedBehaviors = new Set(this.modules.map((m) => m.behavior))
+
+      const nextRef = this.config.modules.find((ref) => {
+        return (
+          this.selectedBehaviors.has(ref.behavior) &&
+          !loadedBehaviors.has(ref.behavior)
+        )
+      })
+
+      if (!nextRef) return null
+
+      const config = useRuntimeConfig()
+      const baseUrl =
+        config.public.url.length > 0
+          ? config.public.url
+          : useRequestURL().origin
+      const url = `${baseUrl}/data/${nextRef.file}`
+
+      const module = await $fetch<SurveyModule>(url)
+      this.modules.push(module)
+
+      return module
     },
   },
 })
