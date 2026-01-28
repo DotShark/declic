@@ -5,6 +5,7 @@ interface SurveyState {
   modules: SurveyModule[]
   currentBehavior: Behavior | null
   currentQuestionIndex: number
+  modulesAnswers: Partial<Record<Behavior, ModuleAnswers>>
 }
 
 export const useSurveyStore = defineStore('survey', {
@@ -15,6 +16,7 @@ export const useSurveyStore = defineStore('survey', {
     modules: [],
     currentBehavior: null,
     currentQuestionIndex: 0,
+    modulesAnswers: {},
   }),
 
   getters: {
@@ -36,6 +38,19 @@ export const useSurveyStore = defineStore('survey', {
 
     currentQuestion(): BehaviorQuestion | undefined {
       return this.currentModule?.questions[this.currentQuestionIndex]
+    },
+
+    currentAnswers(): string[] {
+      if (!this.currentBehavior || !this.currentQuestion) return []
+      return (
+        this.modulesAnswers[this.currentBehavior]?.answers[
+          this.currentQuestion.id
+        ] ?? []
+      )
+    },
+
+    canProceed(): boolean {
+      return this.currentAnswers.length > 0
     },
   },
 
@@ -76,6 +91,32 @@ export const useSurveyStore = defineStore('survey', {
 
     setCurrentQuestionIndex(index: number) {
       this.currentQuestionIndex = index
+    },
+
+    toggleAnswer(optionId: string) {
+      const question = this.currentQuestion
+      const behavior = this.currentBehavior
+      if (!question || !behavior) return
+
+      // Initialize module answers if needed
+      if (!this.modulesAnswers[behavior]) {
+        this.modulesAnswers[behavior] = { behavior, answers: {} }
+      }
+      const moduleAnswers = this.modulesAnswers[behavior]!
+
+      const currentAnswers = moduleAnswers.answers[question.id] ?? []
+
+      if (question.type === 'SINGLE_CHOICE') {
+        moduleAnswers.answers[question.id] = [optionId]
+      } else {
+        if (currentAnswers.includes(optionId)) {
+          moduleAnswers.answers[question.id] = currentAnswers.filter(
+            (id) => id !== optionId,
+          )
+        } else {
+          moduleAnswers.answers[question.id] = [...currentAnswers, optionId]
+        }
+      }
     },
 
     async loadNextModule(): Promise<SurveyModule | null> {

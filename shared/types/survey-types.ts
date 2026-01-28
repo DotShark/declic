@@ -95,3 +95,16 @@ export interface SurveyConfig {
   estimatedDurationMinutes: number
   modules: ModuleReference[]
 }
+
+// ============================================
+// ANSWER STORAGE
+// ============================================
+
+/**
+ * All answers for a single module/behavior
+ * Scores are computed on demand via store getters
+ */
+export interface ModuleAnswers {
+  behavior: Behavior
+  answers: Record<string, string[]> // questionId -> selectedOptionIds
+}

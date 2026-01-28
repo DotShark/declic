@@ -10,30 +10,9 @@ await callOnce('quiz-module', async () => {
   }
 })
 
-const selectedAnswers = ref<Set<string>>(new Set())
-
-function handleSelect(optionId: string) {
-  const question = surveyStore.currentQuestion
-  if (!question) return
-
-  if (question.type === 'SINGLE_CHOICE') {
-    selectedAnswers.value = new Set([optionId])
-  } else {
-    const newSet = new Set(selectedAnswers.value)
-    if (newSet.has(optionId)) {
-      newSet.delete(optionId)
-    } else {
-      newSet.add(optionId)
-    }
-    selectedAnswers.value = newSet
-  }
-}
-
 async function nextQuestion() {
   const module = surveyStore.currentModule
   if (!module) return
-
-  selectedAnswers.value = new Set()
 
   if (surveyStore.currentQuestionIndex < module.questions.length - 1) {
     surveyStore.setCurrentQuestionIndex(surveyStore.currentQuestionIndex + 1)
@@ -47,8 +26,6 @@ async function nextQuestion() {
     }
   }
 }
-
-const canProceed = computed(() => selectedAnswers.value.size > 0)
 
 const progress = computed(() => {
   const module = surveyStore.currentModule
@@ -99,21 +76,17 @@ const progress = computed(() => {
       </header>
 
       <!-- Question Component -->
-      <QuizQuestion
-        :question="surveyStore.currentQuestion"
-        :selected-answers="selectedAnswers"
-        @select="handleSelect"
-      />
+      <QuizQuestion :question="surveyStore.currentQuestion" />
 
       <!-- Navigation -->
       <nav class="flex flex-col gap-4 mt-auto pt-6">
         <button
-          :disabled="!canProceed"
+          :disabled="!surveyStore.canProceed"
           class="w-full px-8 py-4 font-semibold rounded-lg transition-all"
           :class="{
             'bg-blue-600 text-white hover:bg-blue-700 cursor-pointer':
-              canProceed,
-            'bg-gray-300 text-gray-500 cursor-not-allowed': !canProceed,
+              surveyStore.canProceed,
+            'bg-gray-300 text-gray-500 cursor-not-allowed': !surveyStore.canProceed,
           }"
           @click="nextQuestion"
         >

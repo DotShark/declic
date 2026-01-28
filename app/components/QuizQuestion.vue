@@ -1,19 +1,16 @@
 <script setup lang="ts">
-const props = defineProps<{
+defineProps<{
   question: BehaviorQuestion
-  selectedAnswers: Set<string>
 }>()
 
-const emit = defineEmits<{
-  select: [optionId: string]
-}>()
+const surveyStore = useSurveyStore()
 
 function handleSelect(optionId: string) {
-  emit('select', optionId)
+  surveyStore.toggleAnswer(optionId)
 }
 
 function isSelected(optionId: string): boolean {
-  return props.selectedAnswers.has(optionId)
+  return surveyStore.currentAnswers.includes(optionId)
 }
 </script>
 
