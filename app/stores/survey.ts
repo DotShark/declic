@@ -2,6 +2,10 @@ interface SurveyState {
   config: SurveyConfig | null
   error: string | null
   selectedBehaviors: Set<Behavior>
+  modules: SurveyModule[]
+  currentBehavior: Behavior | null
+  currentQuestionIndex: number
+  modulesAnswers: Partial<Record<Behavior, ModuleAnswers>>
 }
 
 export const useSurveyStore = defineStore('survey', {
@@ -9,6 +13,10 @@ export const useSurveyStore = defineStore('survey', {
     config: null,
     error: null,
     selectedBehaviors: new Set(),
+    modules: [],
+    currentBehavior: null,
+    currentQuestionIndex: 0,
+    modulesAnswers: {},
   }),
 
   getters: {
@@ -22,6 +30,27 @@ export const useSurveyStore = defineStore('survey', {
 
     selectedCount(): number {
       return this.selectedBehaviors.size
+    },
+
+    currentModule(): SurveyModule | undefined {
+      return this.modules.find((m) => m.behavior === this.currentBehavior)
+    },
+
+    currentQuestion(): BehaviorQuestion | undefined {
+      return this.currentModule?.questions[this.currentQuestionIndex]
+    },
+
+    currentAnswers(): string[] {
+      if (!this.currentBehavior || !this.currentQuestion) return []
+      return (
+        this.modulesAnswers[this.currentBehavior]?.answers[
+          this.currentQuestion.id
+        ] ?? []
+      )
+    },
+
+    canProceed(): boolean {
+      return this.currentAnswers.length > 0
     },
   },
 
@@ -54,6 +83,67 @@ export const useSurveyStore = defineStore('survey', {
 
     clearSelection() {
       this.selectedBehaviors.clear()
+    },
+
+    setCurrentBehavior(behavior: Behavior | null) {
+      this.currentBehavior = behavior
+    },
+
+    setCurrentQuestionIndex(index: number) {
+      this.currentQuestionIndex = index
+    },
+
+    toggleAnswer(optionId: string) {
+      const question = this.currentQuestion
+      const behavior = this.currentBehavior
+      if (!question || !behavior) return
+
+      // Initialize module answers if needed
+      if (!this.modulesAnswers[behavior]) {
+        this.modulesAnswers[behavior] = { behavior, answers: {} }
+      }
+      const moduleAnswers = this.modulesAnswers[behavior]!
+
+      const currentAnswers = moduleAnswers.answers[question.id] ?? []
+
+      if (question.type === 'SINGLE_CHOICE') {
+        moduleAnswers.answers[question.id] = [optionId]
+      } else {
+        if (currentAnswers.includes(optionId)) {
+          moduleAnswers.answers[question.id] = currentAnswers.filter(
+            (id) => id !== optionId,
+          )
+        } else {
+          moduleAnswers.answers[question.id] = [...currentAnswers, optionId]
+        }
+      }
+    },
+
+    async loadNextModule(): Promise<SurveyModule | null> {
+      if (!this.config) return null
+
+      const loadedBehaviors = new Set(this.modules.map((m) => m.behavior))
+
+      const nextRef = this.config.modules.find((ref) => {
+        return (
+          this.selectedBehaviors.has(ref.behavior) &&
+          !loadedBehaviors.has(ref.behavior)
+        )
+      })
+
+      if (!nextRef) return null
+
+      const config = useRuntimeConfig()
+      const baseUrl =
+        config.public.url.length > 0
+          ? config.public.url
+          : useRequestURL().origin
+      const url = `${baseUrl}/data/${nextRef.file}`
+
+      const module = await $fetch<SurveyModule>(url)
+      this.modules.push(module)
+
+      return module
     },
   },
 })
