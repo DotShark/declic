@@ -86,7 +86,8 @@ const progress = computed(() => {
           :class="{
             'bg-blue-600 text-white hover:bg-blue-700 cursor-pointer':
               surveyStore.canProceed,
-            'bg-gray-300 text-gray-500 cursor-not-allowed': !surveyStore.canProceed,
+            'bg-gray-300 text-gray-500 cursor-not-allowed':
+              !surveyStore.canProceed,
           }"
           @click="nextQuestion"
         >
