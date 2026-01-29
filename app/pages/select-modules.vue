@@ -13,6 +13,8 @@ useHead({
 const surveyStore = useSurveyStore()
 const router = useRouter()
 
+surveyStore.resetQuiz()
+
 await callOnce('survey-config', () => surveyStore.loadConfig())
 
 // Toggle handler

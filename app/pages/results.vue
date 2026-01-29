@@ -34,7 +34,6 @@ const handleDownloadPDF = () => {
 }
 
 const handleRestart = () => {
-  surveyStore.resetQuiz()
   router.push('/')
 }
 

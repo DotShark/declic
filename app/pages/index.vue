@@ -12,6 +12,9 @@ useHead({
 
 const surveyStore = useSurveyStore()
 
+surveyStore.resetQuiz()
+surveyStore.clearSelection()
+
 await callOnce('survey-config', () => surveyStore.loadConfig())
 </script>
 

@@ -13,13 +13,11 @@ useHead({
 const router = useRouter()
 const surveyStore = useSurveyStore()
 
-// Load first module on mount
-await callOnce('quiz-module', async () => {
-  const module = await surveyStore.loadNextModule()
-  if (module) {
-    surveyStore.setCurrentBehavior(module.behavior)
-  }
-})
+// Load first module
+const module = await surveyStore.loadNextModule()
+if (module) {
+  surveyStore.setCurrentBehavior(module.behavior)
+}
 
 // Redirect to home if no module/question available
 if (!surveyStore.currentModule || !surveyStore.currentQuestion) {
