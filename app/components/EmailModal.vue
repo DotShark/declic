@@ -28,6 +28,10 @@ const handleKeydown = (e: KeyboardEvent) => {
 onMounted(() => window.addEventListener('keydown', handleKeydown))
 onUnmounted(() => window.removeEventListener('keydown', handleKeydown))
 
+const handleEmailInput = (e: Event) => {
+  mailStore.setEmail((e.target as HTMLInputElement).value)
+}
+
 const handleSubmit = async () => {
   const success = await mailStore.sendEmail(props.results ?? [])
   if (success) {
@@ -81,7 +85,7 @@ defineExpose({ openModal })
             <input
               id="email-input"
               ref="inputRef"
-              v-model="mailStore.email"
+              :value="mailStore.email"
               type="email"
               placeholder="nom@email.com"
               :disabled="mailStore.isSending"
@@ -92,6 +96,7 @@ defineExpose({ openModal })
                   : 'border-gray-300',
               ]"
               aria-required="true"
+              @input="handleEmailInput"
             />
 
             <!-- GDPR Consent Checkbox -->
@@ -133,7 +138,7 @@ defineExpose({ openModal })
               class="w-full py-3 px-6 rounded-lg font-bold text-white transition-all transform active:scale-[0.98]"
               :class="[
                 mailStore.isFormValid && !mailStore.isSending
-                  ? 'bg-[#00dc82] hover:bg-[#00c575] shadow-md'
+                  ? 'bg-emerald-500 hover:bg-emerald-600'
                   : 'bg-gray-300 cursor-not-allowed',
               ]"
             >

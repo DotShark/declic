@@ -1,92 +1,88 @@
-import { defineStore } from 'pinia'
 import emailjs from '@emailjs/browser'
 import type { ModuleResult } from '~/utils/results'
 
-export const useMailStore = defineStore('mail', () => {
-  const config = useRuntimeConfig()
+export const useMailStore = defineStore('mail', {
+  state: () => ({
+    email: '',
+    statusMessage: '',
+    isSending: false,
+    gdprConsent: false,
+  }),
 
-  const email = ref('')
-  const statusMessage = ref('')
-  const isSending = ref(false)
-  const gdprConsent = ref(false)
+  getters: {
+    isEmailValid: (state) => {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+      return emailRegex.test(state.email)
+    },
 
-  const isEmailValid = computed(() => {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-    return emailRegex.test(email.value)
-  })
+    isFormValid(): boolean {
+      return this.isEmailValid && this.gdprConsent
+    },
+  },
 
-  const isFormValid = computed(() => {
-    return isEmailValid.value && gdprConsent.value
-  })
+  actions: {
+    setEmail(value: string) {
+      this.email = value
+    },
 
-  const resetForm = () => {
-    email.value = ''
-    statusMessage.value = ''
-    gdprConsent.value = false
-  }
+    resetForm() {
+      this.email = ''
+      this.statusMessage = ''
+      this.gdprConsent = false
+    },
 
-  const formatResultsForEmail = (results: ModuleResult[]): string => {
-    let message =
-      'Bonjour,<br /><br />Voici le récapitulatif de vos résultats :<br /><br />'
+    formatResultsForEmail(results: ModuleResult[]): string {
+      let message = 'Bonjour,\n\nVoici le récapitulatif de tes résultats :\n\n'
 
-    for (const result of results) {
-      message += `📋 ${result.moduleName}<br />`
-      message += `${result.result.text}<br /><br />`
-    }
-
-    message += '---<br />'
-    message +=
-      "Ce questionnaire est un outil d'information, pas un diagnostic.<br />"
-    message +=
-      "Pour toute question, n'hésitez pas à consulter un professionnel de santé."
-
-    return message
-  }
-
-  const sendEmail = async (results: ModuleResult[] = []) => {
-    if (!isFormValid.value) return false
-
-    isSending.value = true
-    statusMessage.value = ''
-
-    try {
-      const message =
-        results.length > 0
-          ? formatResultsForEmail(results)
-          : `Bonjour ! Nous avons bien reçu votre demande à l'adresse ${email.value}.`
-
-      const templateParams = {
-        to_email: email.value,
-        reply_to: 'votre-email@exemple.com',
-        message,
+      for (const result of results) {
+        message += `📋 ${result.moduleName}\n`
+        message += `${result.result.text}\n\n`
       }
 
-      await emailjs.send(
-        config.public.mailServiceId as string,
-        config.public.mailTemplateId as string,
-        templateParams,
-        config.public.mailPublicKey as string,
-      )
+      message +=
+        "Ce questionnaire est un outil d'information, pas un diagnostic.\n"
+      message +=
+        "Pour toute question, n'hésite pas à consulter un professionnel de santé."
 
-      statusMessage.value = 'Email envoyé avec succès !'
-      return true
-    } catch (error) {
-      console.error('EmailJS Error:', error)
-      statusMessage.value = "Échec de l'envoi. Veuillez réessayer."
-      return false
-    } finally {
-      isSending.value = false
-    }
-  }
+      return message
+    },
 
-  return {
-    email,
-    statusMessage,
-    isSending,
-    isEmailValid,
-    isFormValid,
-    gdprConsent,
-    sendEmail,
-    resetForm,
-  }
+    async sendEmail(results: ModuleResult[] = []) {
+      if (!this.isFormValid) return false
+
+      console.log(this.email)
+
+      this.isSending = true
+      this.statusMessage = ''
+
+      try {
+        const config = useRuntimeConfig()
+        const message =
+          results.length > 0
+            ? this.formatResultsForEmail(results)
+            : `Bonjour ! Nous avons bien reçu ta demande à l'adresse ${this.email}.`
+
+        const templateParams = {
+          email: this.email,
+          message,
+        }
+
+        await emailjs.send(
+          config.public.mailServiceId as string,
+          config.public.mailTemplateId as string,
+          templateParams,
+          config.public.mailPublicKey as string,
+        )
+
+        this.statusMessage = 'Email envoyé avec succès !'
+        return true
+      } catch (error) {
+        console.error('EmailJS Error:', error)
+        this.statusMessage = "Échec de l'envoi. Veuillez réessayer."
+        return false
+      } finally {
+        this.isSending = false
+      }
+    },
+  },
 })
