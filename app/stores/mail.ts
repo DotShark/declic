@@ -50,8 +50,6 @@ export const useMailStore = defineStore('mail', {
     async sendEmail(results: ModuleResult[] = []) {
       if (!this.isFormValid) return false
 
-      console.log(this.email)
-
       this.isSending = true
       this.statusMessage = ''
 
