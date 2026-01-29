@@ -12,12 +12,7 @@ defineProps<{
   >
     <header class="flex items-center gap-3">
       <div class="w-8 h-8">
-        <Icon
-          :name="icon"
-          size="32"
-          class="text-blue-600"
-          aria-hidden="true"
-        />
+        <Icon :name="icon" size="32" class="text-blue-600" aria-hidden="true" />
       </div>
       <h3 class="text-lg font-semibold font-family-poppins text-gray-900">
         {{ moduleName }}
