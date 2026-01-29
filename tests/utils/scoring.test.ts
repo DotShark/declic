@@ -37,6 +37,7 @@ describe('Scoring Functions', () => {
     behavior: 'ALCOHOL',
     icon: 'lucide:wine',
     questions: mockQuestions,
+    results: [],
   }
 
   describe('calculateModuleScore', () => {
