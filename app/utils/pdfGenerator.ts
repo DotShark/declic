@@ -40,7 +40,7 @@ export function generateResultsPDF(options: PDFGeneratorOptions): void {
 
   doc.setFontSize(14)
   doc.setFont('helvetica', 'normal')
-  doc.text('Votre bilan personnalisé', pageWidth - margin, 28, {
+  doc.text('Ton bilan personnalisé', pageWidth - margin, 28, {
     align: 'right',
   })
 
