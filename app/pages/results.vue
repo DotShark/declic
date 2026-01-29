@@ -1,6 +1,17 @@
 <script setup lang="ts">
 import { computeAllResults } from '~/utils/results'
 
+useHead({
+  title: 'Résultats - Declic',
+  meta: [
+    {
+      name: 'description',
+      content:
+        'Consulte tes résultats personnalisés et découvre les ressources adaptées à tes besoins.',
+    },
+  ],
+})
+
 const router = useRouter()
 const surveyStore = useSurveyStore()
 
