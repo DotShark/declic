@@ -26,16 +26,19 @@ export const useMailStore = defineStore('mail', () => {
   }
 
   const formatResultsForEmail = (results: ModuleResult[]): string => {
-    let message = 'Bonjour,\n\nVoici le récapitulatif de vos résultats :\n\n'
+    let message =
+      'Bonjour,<br /><br />Voici le récapitulatif de vos résultats :<br /><br />'
 
     for (const result of results) {
-      message += `📋 ${result.moduleName}\n`
-      message += `${result.result.text}\n\n`
+      message += `📋 ${result.moduleName}<br />`
+      message += `${result.result.text}<br /><br />`
     }
 
-    message += '---\n'
-    message += "Ce questionnaire est un outil d'information, pas un diagnostic.\n"
-    message += "Pour toute question, n'hésitez pas à consulter un professionnel de santé."
+    message += '---<br />'
+    message +=
+      "Ce questionnaire est un outil d'information, pas un diagnostic.<br />"
+    message +=
+      "Pour toute question, n'hésitez pas à consulter un professionnel de santé."
 
     return message
   }
