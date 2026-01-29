@@ -26,12 +26,14 @@ const handleStartQuiz = () => {
       role="alert"
       aria-live="assertive"
     >
-      <Icon
-        name="lucide:alert-circle"
-        size="48"
-        class="text-red-500"
-        aria-hidden="true"
-      />
+      <div class="w-12 h-12">
+        <Icon
+          name="lucide:alert-circle"
+          size="48"
+          class="text-red-500"
+          aria-hidden="true"
+        />
+      </div>
       <p class="text-red-600">{{ surveyStore.error }}</p>
       <NuxtLink to="/" class="text-blue-600 underline"
         >Retour à l'accueil</NuxtLink
@@ -76,7 +78,7 @@ const handleStartQuiz = () => {
           @click="handleToggle(module.behavior)"
         >
           <!-- Icon -->
-          <div class="shrink-0">
+          <div class="w-8 h-8">
             <Icon
               :name="module.icon"
               size="32"
@@ -100,7 +102,7 @@ const handleStartQuiz = () => {
           </span>
 
           <!-- Checkbox -->
-          <div class="shrink-0">
+          <div class="w-6 h-6">
             <Icon
               :name="
                 surveyStore.isSelected(module.behavior)

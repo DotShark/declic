@@ -30,6 +30,7 @@
   "devDependencies": {
     "@vue/test-utils": "^2.4.6",
     "prettier": "^3.8.1",
-    "vitest": "^4.0.18"
+    "vitest": "^4.0.18",
+    "@iconify-json/lucide": "^1.2.87"
   }
 }
