@@ -97,6 +97,25 @@ export interface SurveyConfig {
 }
 
 // ============================================
+// PROGRESS TRACKING
+// ============================================
+
+/**
+ * Status of a module in the survey progress
+ */
+export type ModuleStatus = 'pending' | 'in_progress' | 'completed'
+
+/**
+ * Progress information for a single module
+ */
+export interface ModuleProgress {
+  behavior: Behavior
+  name: string
+  icon: string
+  status: ModuleStatus
+}
+
+// ============================================
 // ANSWER STORAGE
 // ============================================
 

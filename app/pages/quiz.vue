@@ -57,6 +57,9 @@ const progress = computed(() => {
 
     <!-- Quiz Content -->
     <main v-else class="flex flex-col max-w-3xl mx-auto w-full gap-8 flex-1">
+      <!-- Progress Bar -->
+      <ProgressBar />
+
       <!-- Header with Module Name and Progress -->
       <header class="flex flex-col gap-2">
         <div class="flex items-center justify-between">
