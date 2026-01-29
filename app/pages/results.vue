@@ -23,11 +23,9 @@ const results = computed(() =>
 )
 
 // Redirect if no results (direct navigation or empty state)
-onMounted(() => {
-  if (results.value.length === 0) {
-    router.replace('/select-modules')
-  }
-})
+if (results.value.length === 0) {
+  await navigateTo('/')
+}
 
 const handleDownloadPDF = () => {
   generateResultsPDF({
@@ -37,7 +35,7 @@ const handleDownloadPDF = () => {
 
 const handleRestart = () => {
   surveyStore.resetQuiz()
-  router.push('/select-modules')
+  router.push('/')
 }
 
 // Email modal
@@ -52,32 +50,8 @@ const handleOpenEmailModal = () => {
 
 <template>
   <div class="flex flex-col min-h-screen p-6">
-    <!-- Empty State -->
-    <div
-      v-if="results.length === 0"
-      class="flex flex-col items-center justify-center flex-1 gap-4"
-    >
-      <div class="w-12 h-12">
-        <Icon
-          name="lucide:clipboard-list"
-          size="48"
-          class="text-gray-400"
-          aria-hidden="true"
-        />
-      </div>
-      <p class="text-gray-600 font-family-inter">
-        Tu n'as pas encore complété de modules.
-      </p>
-      <NuxtLink
-        to="/select-modules"
-        class="text-blue-600 hover:text-blue-700 underline font-family-inter"
-      >
-        Retourner au quiz
-      </NuxtLink>
-    </div>
-
     <!-- Results Content -->
-    <main v-else class="flex flex-col max-w-3xl mx-auto w-full gap-8">
+    <main class="flex flex-col max-w-3xl mx-auto w-full gap-8">
       <!-- Header -->
       <header class="flex flex-col items-center gap-4 text-center">
         <div class="w-16 h-16">

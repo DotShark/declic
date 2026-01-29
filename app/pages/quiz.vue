@@ -21,6 +21,11 @@ await callOnce('quiz-module', async () => {
   }
 })
 
+// Redirect to home if no module/question available
+if (!surveyStore.currentModule || !surveyStore.currentQuestion) {
+  await navigateTo('/')
+}
+
 async function nextQuestion() {
   const module = surveyStore.currentModule
   if (!module) return
@@ -49,25 +54,11 @@ const progress = computed(() => {
 </script>
 
 <template>
-  <div class="flex flex-col min-h-screen p-6">
-    <!-- Loading State -->
-    <div
-      v-if="!surveyStore.currentModule || !surveyStore.currentQuestion"
-      class="flex flex-col items-center justify-center flex-1 gap-4"
-    >
-      <div class="w-12 h-12">
-        <Icon
-          name="lucide:loader-2"
-          size="48"
-          class="text-blue-600 animate-spin"
-          aria-hidden="true"
-        />
-      </div>
-      <p class="text-gray-600">Chargement du quiz...</p>
-    </div>
-
-    <!-- Quiz Content -->
-    <main v-else class="flex flex-col max-w-3xl mx-auto w-full gap-8 flex-1">
+  <div
+    v-if="surveyStore.currentModule && surveyStore.currentQuestion"
+    class="flex flex-col min-h-screen p-6"
+  >
+    <main class="flex flex-col max-w-3xl mx-auto w-full gap-8 flex-1">
       <!-- Progress Bar -->
       <ProgressBar />
 
