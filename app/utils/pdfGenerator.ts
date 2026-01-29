@@ -14,7 +14,7 @@ export function generateResultsPDF(options: PDFGeneratorOptions): void {
 
   doc.setProperties({
     title: 'Résultats - Déclic',
-    subject: 'Bilan de votre questionnaire Déclic',
+    subject: 'Bilan de ton questionnaire Déclic',
     author: 'Déclic',
     creator: 'Déclic App',
   })
