@@ -226,5 +226,22 @@
         }
       ]
     }
+  ],
+  "results": [
+    {
+      "id": "result-tobacco-low",
+      "text": "Bien joué ! Tu ne fumes pas ou très peu. Ta santé te remerciera. Si jamais l'envie de fumer augmente, n'oublie pas qu'il est toujours plus facile d'agir tôt.",
+      "value": 8
+    },
+    {
+      "id": "result-tobacco-medium",
+      "text": "Le tabac est installé dans ta routine. Tu connais probablement les risques, mais arrêter reste compliqué. La bonne nouvelle ? Des solutions existent et beaucoup de personnes réussissent à décrocher avec le bon accompagnement.",
+      "value": 12
+    },
+    {
+      "id": "result-tobacco-high",
+      "text": "Fumer fait vraiment partie de ta vie. L'idée d'arrêter te semble peut-être impossible, et c'est normal de ressentir ça. Pourtant, avec un accompagnement personnalisé et des outils adaptés, réussir à arrêter devient accessible. Tu mérites ce soutien.",
+      "value": 18
+    }
   ]
 }

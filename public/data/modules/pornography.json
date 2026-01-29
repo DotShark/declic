@@ -190,5 +190,22 @@
         }
       ]
     }
+  ],
+  "results": [
+    {
+      "id": "result-pornography-low",
+      "text": "Tes habitudes de visionnage restent occasionnelles et ça ne semble pas interférer avec ta vie. Pas d'inquiétude particulière de ce côté-là.",
+      "value": 8
+    },
+    {
+      "id": "result-pornography-medium",
+      "text": "Tu regardes du porno assez souvent. Peut-être que tu te demandes si ça influence ta sexualité ou tes attentes dans tes relations ? Ces questions sont légitimes. En parler en toute confidentialité peut t'apporter des réponses.",
+      "value": 12
+    },
+    {
+      "id": "result-pornography-high",
+      "text": "La pornographie est devenue très présente, peut-être même indispensable ? Si tu sens que ça impacte ta vie intime, tes relations ou ton bien-être, un professionnel peut t'accompagner dans une démarche totalement confidentielle.",
+      "value": 18
+    }
   ]
 }

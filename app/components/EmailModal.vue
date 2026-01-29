@@ -86,7 +86,7 @@ defineExpose({ openModal })
                   : 'border-gray-300',
               ]"
               aria-required="true"
-            >
+            />
 
             <button
               type="submit"

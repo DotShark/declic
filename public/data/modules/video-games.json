@@ -190,5 +190,22 @@
         }
       ]
     }
+  ],
+  "results": [
+    {
+      "id": "result-video-games-low",
+      "text": "Tu kiffes jouer mais ça ne bouffe pas tout ton temps. GG ! Tu gardes un bon équilibre entre gaming et le reste. Les jeux restent un plaisir, pas une obligation.",
+      "value": 8
+    },
+    {
+      "id": "result-video-games-medium",
+      "text": "\"Juste une partie de plus...\" ça te dit quelque chose ? Le gaming prend pas mal de place et tu sens peut-être que ça commence à jouer sur tes études, ton sommeil ou tes relations. Prendre du recul pourrait t'aider.",
+      "value": 12
+    },
+    {
+      "id": "result-video-games-high",
+      "text": "Game over sur le reste ? Les jeux ont pris le contrôle de ton quotidien. Décrocher devient compliqué, même quand tu sais que tu devrais. Rassure-toi, on peut t'aider à retrouver un équilibre sain tout en gardant le plaisir du jeu.",
+      "value": 18
+    }
   ]
 }
