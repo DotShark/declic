@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computeAllResults } from '~/utils/results'
+import { generateResultsPDF } from '~/utils/pdfGenerator'
 import EmailModal from '~/components/EmailModal.vue'
 
 useHead({
@@ -27,6 +28,12 @@ onMounted(() => {
     router.replace('/select-modules')
   }
 })
+
+const handleDownloadPDF = () => {
+  generateResultsPDF({
+    results: results.value,
+  })
+}
 
 const handleRestart = () => {
   surveyStore.resetQuiz()
@@ -108,6 +115,14 @@ const handleOpenEmailModal = () => {
           @click="handleOpenEmailModal"
         >
           Recevoir mes résultats par email
+        </button>
+
+        <button
+          class="w-full px-8 py-4 bg-emerald-600 text-white font-semibold rounded-lg hover:bg-emerald-700 transition-all flex items-center justify-center gap-2"
+          @click="handleDownloadPDF"
+        >
+          <Icon name="lucide:download" size="20" />
+          Télécharger mes résultats (PDF)
         </button>
 
         <button
