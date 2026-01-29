@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import EmailModal from '~/components/EmailModal.vue'
-
 useHead({
   title: 'Accueil - Declic',
   meta: [
@@ -15,13 +12,6 @@ useHead({
 
 const surveyStore = useSurveyStore()
 
-const emailModal = ref<InstanceType<typeof EmailModal> | null>(null)
-
-const handleOpenModal = () => {
-  if (emailModal.value) {
-    emailModal.value.openModal()
-  }
-}
 await callOnce('survey-config', () => surveyStore.loadConfig())
 </script>
 
@@ -84,10 +74,6 @@ await callOnce('survey-config', () => surveyStore.loadConfig())
       >
         Commencer
       </NuxtLink>
-
-      <button @click="handleOpenModal">Recevoir mes résultats</button>
-      
-      <EmailModal ref="emailModal" />
     </div>
   </main>
 </template>

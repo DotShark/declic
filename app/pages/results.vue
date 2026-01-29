@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computeAllResults } from '~/utils/results'
 import { generateResultsPDF } from '~/utils/pdfGenerator'
+import EmailModal from '~/components/EmailModal.vue'
 
 useHead({
   title: 'Résultats - Declic',
@@ -37,6 +38,15 @@ const handleDownloadPDF = () => {
 const handleRestart = () => {
   surveyStore.resetQuiz()
   router.push('/select-modules')
+}
+
+// Email modal
+const emailModal = ref<InstanceType<typeof EmailModal> | null>(null)
+
+const handleOpenEmailModal = () => {
+  if (emailModal.value) {
+    emailModal.value.openModal()
+  }
 }
 </script>
 
@@ -102,6 +112,7 @@ const handleRestart = () => {
       <nav class="flex flex-col gap-4 mt-4">
         <button
           class="w-full px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-all"
+          @click="handleOpenEmailModal"
         >
           Recevoir mes résultats par email
         </button>
@@ -130,6 +141,6 @@ const handleRestart = () => {
       </nav>
     </main>
 
-    <EmailModal ref="emailModal" />
+    <EmailModal ref="emailModal" :results="results" />
   </div>
 </template>
