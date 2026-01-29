@@ -70,7 +70,7 @@ export const useSurveyStore = defineStore('survey', {
 
     completedModulesCount(): number {
       return Array.from(this.selectedBehaviors).filter((behavior) =>
-        this.isModuleCompleted(behavior)
+        this.isModuleCompleted(behavior),
       ).length
     },
 
@@ -86,7 +86,7 @@ export const useSurveyStore = defineStore('survey', {
       // Calculate progress for each selected behavior
       Array.from(this.selectedBehaviors).forEach((behavior) => {
         const module = this.modules.find((m) => m.behavior === behavior)
-        
+
         // If module not loaded yet, it contributes 0%
         if (!module) return
 
@@ -103,19 +103,15 @@ export const useSurveyStore = defineStore('survey', {
         })
 
         // Calculate this module's contribution to overall progress
-        const moduleProgress = (answeredCount / module.questions.length) * moduleWeight
+        const moduleProgress =
+          (answeredCount / module.questions.length) * moduleWeight
         progress += moduleProgress
       })
 
       return Math.round(progress)
     },
 
-    modulesProgress(): Array<{
-      behavior: Behavior
-      name: string
-      icon: string
-      status: 'pending' | 'in_progress' | 'completed'
-    }> {
+    modulesProgress(): ModuleProgress[] {
       if (!this.config) return []
 
       // Follow the order from config, not the selection order
