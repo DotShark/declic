@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computeAllResults } from '~/utils/results'
+import { generateResultsPDF } from '~/utils/pdfGenerator'
 
 useHead({
   title: 'Résultats - Declic',
@@ -26,6 +27,12 @@ onMounted(() => {
     router.replace('/select-modules')
   }
 })
+
+const handleDownloadPDF = () => {
+  generateResultsPDF({
+    results: results.value,
+  })
+}
 
 const handleRestart = () => {
   surveyStore.resetQuiz()
@@ -97,6 +104,14 @@ const handleRestart = () => {
           class="w-full px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-all"
         >
           Recevoir mes résultats par email
+        </button>
+
+        <button
+          class="w-full px-8 py-4 bg-emerald-600 text-white font-semibold rounded-lg hover:bg-emerald-700 transition-all flex items-center justify-center gap-2"
+          @click="handleDownloadPDF"
+        >
+          <Icon name="lucide:download" size="20" />
+          Télécharger mes résultats (PDF)
         </button>
 
         <button

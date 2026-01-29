@@ -86,6 +86,7 @@ await callOnce('survey-config', () => surveyStore.loadConfig())
       </NuxtLink>
 
       <button @click="handleOpenModal">Recevoir mes résultats</button>
+      
       <EmailModal ref="emailModal" />
     </div>
   </main>
