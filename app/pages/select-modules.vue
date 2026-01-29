@@ -1,4 +1,15 @@
 <script setup lang="ts">
+useHead({
+  title: 'Sélection des modules - Declic',
+  meta: [
+    {
+      name: 'description',
+      content:
+        'Choisis les comportements sur lesquels tu souhaites faire le point : alcool, cannabis, jeux, réseaux sociaux et plus encore.',
+    },
+  ],
+})
+
 const surveyStore = useSurveyStore()
 const router = useRouter()
 

@@ -1,4 +1,15 @@
 <script setup lang="ts">
+useHead({
+  title: 'Questionnaire - Declic',
+  meta: [
+    {
+      name: 'description',
+      content:
+        "Réponds aux questions de façon anonyme pour mieux comprendre tes habitudes et identifier les ressources qui peuvent t'aider.",
+    },
+  ],
+})
+
 const router = useRouter()
 const surveyStore = useSurveyStore()
 
