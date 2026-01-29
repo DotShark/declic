@@ -227,5 +227,12 @@ export const useSurveyStore = defineStore('survey', {
 
       return module
     },
+
+    resetQuiz() {
+      this.modulesAnswers = {}
+      this.modules = []
+      this.currentBehavior = null
+      this.currentQuestionIndex = 0
+    },
   },
 })
