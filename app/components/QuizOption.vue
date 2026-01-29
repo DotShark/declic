@@ -21,7 +21,7 @@ defineEmits<{
     @click="$emit('select')"
   >
     <!-- Radio/Checkbox Icon -->
-    <div class="shrink-0">
+    <div class="w-6 h-6">
       <Icon
         :name="
           type === 'SINGLE_CHOICE'

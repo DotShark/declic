@@ -44,12 +44,14 @@ const progress = computed(() => {
       v-if="!surveyStore.currentModule || !surveyStore.currentQuestion"
       class="flex flex-col items-center justify-center flex-1 gap-4"
     >
-      <Icon
-        name="lucide:loader-2"
-        size="48"
-        class="text-blue-600 animate-spin"
-        aria-hidden="true"
-      />
+      <div class="w-12 h-12">
+        <Icon
+          name="lucide:loader-2"
+          size="48"
+          class="text-blue-600 animate-spin"
+          aria-hidden="true"
+        />
+      </div>
       <p class="text-gray-600">Chargement du quiz...</p>
     </div>
 
@@ -59,12 +61,14 @@ const progress = computed(() => {
       <header class="flex flex-col gap-2">
         <div class="flex items-center justify-between">
           <div class="flex items-center gap-3">
-            <Icon
-              :name="surveyStore.currentModule.icon"
-              size="28"
-              class="text-blue-600"
-              aria-hidden="true"
-            />
+            <div class="w-7 h-7">
+              <Icon
+                :name="surveyStore.currentModule.icon"
+                size="28"
+                class="text-blue-600"
+                aria-hidden="true"
+              />
+            </div>
             <span class="text-lg font-medium text-gray-700 font-family-inter">
               {{ surveyStore.currentModule.name }}
             </span>

@@ -24,12 +24,14 @@ await callOnce('survey-config', () => surveyStore.loadConfig())
       role="alert"
       aria-live="assertive"
     >
-      <Icon
-        name="lucide:alert-circle"
-        size="48"
-        class="text-red-500"
-        aria-hidden="true"
-      />
+      <div class="w-12 h-12">
+        <Icon
+          name="lucide:alert-circle"
+          size="48"
+          class="text-red-500"
+          aria-hidden="true"
+        />
+      </div>
       <p class="text-red-600">{{ surveyStore.error }}</p>
     </div>
 
@@ -37,12 +39,14 @@ await callOnce('survey-config', () => surveyStore.loadConfig())
       v-else-if="surveyStore.config"
       class="flex flex-col items-center gap-6 max-w-2xl text-center"
     >
-      <Icon
-        name="lucide:brain"
-        size="64"
-        class="text-blue-600"
-        aria-hidden="true"
-      />
+      <div class="w-16 h-16">
+        <Icon
+          name="lucide:brain"
+          size="64"
+          class="text-blue-600"
+          aria-hidden="true"
+        />
+      </div>
 
       <h1 class="text-4xl font-bold font-family-poppins">
         {{ surveyStore.config.title }}
@@ -53,7 +57,9 @@ await callOnce('survey-config', () => surveyStore.loadConfig())
       </p>
 
       <div class="flex items-center gap-2 text-sm text-gray-600">
-        <Icon name="lucide:clock" size="20" aria-hidden="true" />
+        <div class="w-5 h-5">
+          <Icon name="lucide:clock" size="20" aria-hidden="true" />
+        </div>
         <span
           >Environ
           {{ surveyStore.config.estimatedDurationMinutes }} minutes</span
