@@ -2,6 +2,17 @@
 import { ref } from 'vue'
 import EmailModal from '~/components/EmailModal.vue'
 
+useHead({
+  title: 'Accueil - Declic',
+  meta: [
+    {
+      name: 'description',
+      content:
+        'Dépistage anonyme des comportements à risque et orientation vers les ressources de soutien pour étudiants.',
+    },
+  ],
+})
+
 const surveyStore = useSurveyStore()
 
 const emailModal = ref<InstanceType<typeof EmailModal> | null>(null)

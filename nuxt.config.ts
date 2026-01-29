@@ -12,6 +12,23 @@ export default defineNuxtConfig({
   },
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
+  app: {
+    head: {
+      htmlAttrs: {
+        lang: 'fr',
+      },
+      title: 'Declic - Dépistage anonyme des addictions',
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        {
+          name: 'description',
+          content:
+            "Plateforme anonyme de dépistage et d'orientation vers le soutien en matière d'addictions pour les étudiants.",
+        },
+      ],
+    },
+  },
   modules: ['@nuxt/fonts', '@nuxt/icon', '@pinia/nuxt', '@nuxt/eslint'],
   css: ['./app/assets/css/main.css'],
   fonts: {
