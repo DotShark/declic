@@ -1,4 +1,10 @@
 <script setup lang="ts">
+import type { ModuleResult } from '~/utils/results'
+
+const props = defineProps<{
+  results?: ModuleResult[]
+}>()
+
 const mailStore = useMailStore()
 const isOpen = ref(false)
 const inputRef = ref<HTMLInputElement | null>(null)
@@ -22,8 +28,12 @@ const handleKeydown = (e: KeyboardEvent) => {
 onMounted(() => window.addEventListener('keydown', handleKeydown))
 onUnmounted(() => window.removeEventListener('keydown', handleKeydown))
 
+const handleEmailInput = (e: Event) => {
+  mailStore.setEmail((e.target as HTMLInputElement).value)
+}
+
 const handleSubmit = async () => {
-  const success = await mailStore.sendEmail()
+  const success = await mailStore.sendEmail(props.results ?? [])
   if (success) {
     setTimeout(() => closeModal(), 2000)
   }
@@ -75,7 +85,7 @@ defineExpose({ openModal })
             <input
               id="email-input"
               ref="inputRef"
-              v-model="mailStore.email"
+              :value="mailStore.email"
               type="email"
               placeholder="nom@email.com"
               :disabled="mailStore.isSending"
@@ -86,15 +96,49 @@ defineExpose({ openModal })
                   : 'border-gray-300',
               ]"
               aria-required="true"
+              @input="handleEmailInput"
             />
+
+            <!-- GDPR Consent Checkbox -->
+            <button
+              type="button"
+              class="flex items-start gap-3 p-4 rounded-xl border-2 transition-all cursor-pointer text-left w-full"
+              :class="[
+                mailStore.gdprConsent
+                  ? 'border-blue-600 bg-blue-50'
+                  : 'border-gray-300 bg-white hover:border-gray-400',
+              ]"
+              :disabled="mailStore.isSending"
+              @click="mailStore.gdprConsent = !mailStore.gdprConsent"
+            >
+              <div class="w-6 h-6 shrink-0 mt-0.5">
+                <Icon
+                  :name="
+                    mailStore.gdprConsent
+                      ? 'lucide:check-square'
+                      : 'lucide:square'
+                  "
+                  size="24"
+                  :class="
+                    mailStore.gdprConsent ? 'text-blue-600' : 'text-gray-400'
+                  "
+                />
+              </div>
+              <span class="text-sm text-gray-700 font-family-inter">
+                J'accepte que mon adresse email soit utilisée uniquement pour
+                l'envoi de mes résultats. Elle ne sera pas conservée ni utilisée
+                à d'autres fins.
+                <span class="text-red-500">*</span>
+              </span>
+            </button>
 
             <button
               type="submit"
-              :disabled="!mailStore.isEmailValid || mailStore.isSending"
+              :disabled="!mailStore.isFormValid || mailStore.isSending"
               class="w-full py-3 px-6 rounded-lg font-bold text-white transition-all transform active:scale-[0.98]"
               :class="[
-                mailStore.isEmailValid && !mailStore.isSending
-                  ? 'bg-[#00dc82] hover:bg-[#00c575] shadow-md'
+                mailStore.isFormValid && !mailStore.isSending
+                  ? 'bg-emerald-500 hover:bg-emerald-600'
                   : 'bg-gray-300 cursor-not-allowed',
               ]"
             >
