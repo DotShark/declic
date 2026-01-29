@@ -12,7 +12,7 @@ defineEmits<{
 
 <template>
   <button
-    class="flex items-center gap-4 p-4 rounded-xl border-2 transition-all cursor-pointer text-left"
+    class="flex items-center gap-4 p-4 rounded-xl border-2 transition-all text-left"
     :class="{
       'border-blue-600 bg-blue-50': selected,
       'border-gray-300 bg-white hover:border-gray-400': !selected,

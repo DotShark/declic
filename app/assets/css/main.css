@@ -1,5 +1,13 @@
 @import 'tailwindcss';
 
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
 @theme {
   --font-family-inter: 'Inter', system-ui, sans-serif;
   --font-family-poppins: 'Poppins', serif;

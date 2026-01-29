@@ -102,7 +102,7 @@ defineExpose({ openModal })
             <!-- GDPR Consent Checkbox -->
             <button
               type="button"
-              class="flex items-start gap-3 p-4 rounded-xl border-2 transition-all cursor-pointer text-left w-full"
+              class="flex items-start gap-3 p-4 rounded-xl border-2 transition-all text-left w-full"
               :class="[
                 mailStore.gdprConsent
                   ? 'border-blue-600 bg-blue-50'
@@ -139,7 +139,7 @@ defineExpose({ openModal })
               :class="[
                 mailStore.isFormValid && !mailStore.isSending
                   ? 'bg-emerald-500 hover:bg-emerald-600'
-                  : 'bg-gray-300 cursor-not-allowed',
+                  : 'bg-gray-300',
               ]"
             >
               <span
