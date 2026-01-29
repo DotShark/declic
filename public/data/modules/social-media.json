@@ -190,5 +190,22 @@
         }
       ]
     }
+  ],
+  "results": [
+    {
+      "id": "result-social-media-low",
+      "text": "Tu scrolles sans y passer des heures, et ça ne te prend pas la tête. Les réseaux restent un outil sympa sans devenir envahissants. Continue comme ça, tu as trouvé ton équilibre !",
+      "value": 8
+    },
+    {
+      "id": "result-social-media-medium",
+      "text": "Instagram, TikTok, Snapchat... ils font partie de ta vie, parfois un peu trop. Tu t'es déjà retrouvé à scroller sans savoir pourquoi ? Tester des limites de temps d'écran pourrait te faire du bien.",
+      "value": 12
+    },
+    {
+      "id": "result-social-media-high",
+      "text": "Difficile de lâcher ton téléphone ? Les réseaux sociaux occupent une grande partie de ton temps et de tes pensées. Cette hyperconnexion peut vraiment peser sur ton moral. Un coup de main pour reprendre le contrôle pourrait être utile.",
+      "value": 18
+    }
   ]
 }

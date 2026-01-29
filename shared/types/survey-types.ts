@@ -59,6 +59,14 @@ export interface BehaviorQuestion {
   associatedBehavior: Behavior
 }
 
+/**
+ * Results for a behavior
+ */
+export interface BehaviorResult {
+  id: string
+  text: string
+  value: number
+}
 // ============================================
 // MODULES & SURVEY STRUCTURE
 // ============================================
@@ -83,6 +91,7 @@ export interface SurveyModule {
   behavior: Behavior
   icon: string
   questions: BehaviorQuestion[]
+  results: BehaviorResult[]
 }
 
 /**

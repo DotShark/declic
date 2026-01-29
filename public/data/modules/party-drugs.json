@@ -203,5 +203,22 @@
         }
       ]
     }
+  ],
+  "results": [
+    {
+      "id": "result-party-drugs-low",
+      "text": "Faire la fête ne rime pas forcément avec conso pour toi. Tu protèges ta santé et tu restes lucide sur les risques. C'est une attitude responsable qui mérite d'être saluée.",
+      "value": 8
+    },
+    {
+      "id": "result-party-drugs-medium",
+      "text": "MDMA, coke, speed... ces produits font partie de tes soirées de façon assez régulière. Tu connais les risques mais tu continues. Parler de ta conso en toute honnêteté avec quelqu'un qui s'y connaît pourrait t'éclairer.",
+      "value": 12
+    },
+    {
+      "id": "result-party-drugs-high",
+      "text": "Les soirées sans prods, tu ne sais plus faire ? Ta consommation devient inquiétante, pour ta santé physique comme mentale. Des structures spécialisées en réduction des risques existent pour t'accompagner, que tu veuilles arrêter ou juste mieux gérer.",
+      "value": 18
+    }
   ]
 }

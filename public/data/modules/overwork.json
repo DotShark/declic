@@ -180,5 +180,22 @@
         }
       ]
     }
+  ],
+  "results": [
+    {
+      "id": "result-overwork-low",
+      "text": "Bravo, tu arrives à poser des limites ! Travail et vie perso cohabitent sans que l'un n'écrase l'autre. Protéger cet équilibre sera précieux pour ton avenir.",
+      "value": 8
+    },
+    {
+      "id": "result-overwork-medium",
+      "text": "Entre les cours, le job et les révisions, tu carbures non-stop. Le mot \"pause\" ne fait plus partie de ton vocabulaire ? Attention au burn-out étudiant. Apprendre à dire non et à déconnecter, c'est aussi une forme de réussite.",
+      "value": 12
+    },
+    {
+      "id": "result-overwork-high",
+      "text": "Tu es à fond tout le temps, au point d'être complètement épuisé. Le travail a envahi tous tes espaces, même ton sommeil. Ce rythme n'est pas tenable. Des pros peuvent t'aider à sortir de cette spirale avant que ton corps et ton mental lâchent.",
+      "value": 18
+    }
   ]
 }

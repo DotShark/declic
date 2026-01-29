@@ -203,5 +203,22 @@
         }
       ]
     }
+  ],
+  "results": [
+    {
+      "id": "result-cannabis-low",
+      "text": "D'après tes réponses, le cannabis ne semble pas prendre beaucoup de place dans ta vie. C'est positif ! Garde en tête que rester attentif aux raisons pour lesquelles tu en consommes peut t'aider à conserver cet équilibre.",
+      "value": 8
+    },
+    {
+      "id": "result-cannabis-medium",
+      "text": "Le cannabis fait partie de tes habitudes. Peut-être que tu remarques déjà certains effets sur ton quotidien ? Si tu ressens le besoin d'en discuter ou de mieux comprendre ta consommation, des personnes peuvent t'écouter sans te juger.",
+      "value": 12
+    },
+    {
+      "id": "result-cannabis-high",
+      "text": "Le cannabis semble très présent dans ta vie actuellement. Si tu te demandes comment réduire ou si tu aimerais mieux gérer cette consommation, sache qu'un accompagnement adapté existe. Tu n'es pas seul face à ça.",
+      "value": 18
+    }
   ]
 }

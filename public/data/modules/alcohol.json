@@ -203,5 +203,22 @@
         }
       ]
     }
+  ],
+  "results": [
+    {
+      "id": "result-alcohol-low",
+      "text": "L'alcool ne semble pas poser de problème dans ta vie. Tu bois peu ou de façon très occasionnelle. Tu gardes le contrôle sur ta consommation, et c'est important de continuer ainsi.",
+      "value": 8
+    },
+    {
+      "id": "result-alcohol-medium",
+      "text": "Tu bois assez régulièrement. Peut-être que tu te demandes parfois si tu pourrais ralentir ? Rester conscient de ta consommation et des moments où tu bois est déjà une belle démarche.",
+      "value": 12
+    },
+    {
+      "id": "result-alcohol-high",
+      "text": "L'alcool occupe une place importante dans ton quotidien. Tu sens peut-être que tu as du mal à contrôler ta consommation ou que ça commence à avoir un impact sur ta vie. Se faire accompagner pour en parler et trouver des solutions, c'est un pas courageux.",
+      "value": 18
+    }
   ]
 }

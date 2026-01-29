@@ -175,5 +175,22 @@
         }
       ]
     }
+  ],
+  "results": [
+    {
+      "id": "result-gambling-low",
+      "text": "Les jeux d'argent restent un divertissement pour toi, sans excès. Tu gardes le contrôle sur tes mises et ton temps de jeu. C'est exactement comme ça que ça devrait être !",
+      "value": 8
+    },
+    {
+      "id": "result-gambling-medium",
+      "text": "Tu joues souvent, et l'argent dépensé commence peut-être à te préoccuper. Ce questionnement est déjà une prise de conscience importante. Si tu veux faire le point ou poser des limites, des ressources peuvent t'y aider.",
+      "value": 12
+    },
+    {
+      "id": "result-gambling-high",
+      "text": "Les jeux d'argent prennent beaucoup de place dans ton quotidien et ta tête. L'envie de te refaire ou la difficulté à arrêter sont des signaux qu'il ne faut pas ignorer. Des spécialistes de l'addiction au jeu existent pour t'épauler.",
+      "value": 18
+    }
   ]
 }

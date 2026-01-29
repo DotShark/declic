@@ -180,5 +180,22 @@
         }
       ]
     }
+  ],
+  "results": [
+    {
+      "id": "result-medication-low",
+      "text": "Tu ne détournes pas de médicaments de leur usage prévu. Tant mieux ! Ces produits peuvent être dangereux hors prescription. Trouver d'autres façons de gérer le stress ou la fatigue reste toujours plus sûr.",
+      "value": 8
+    },
+    {
+      "id": "result-medication-medium",
+      "text": "Anxiolytiques, somnifères, stimulants... tu les utilises sans ordonnance pour tenir le coup. Les risques sont réels : dépendance, effets secondaires, interactions. Un médecin peut t'aider à trouver des solutions légales et adaptées.",
+      "value": 12
+    },
+    {
+      "id": "result-medication-high",
+      "text": "Les médicaments détournés font partie de ton quotidien. La dépendance est probablement là, avec son lot de complications. Arrêter seul peut être dangereux. Un suivi médical spécialisé est indispensable pour sortir de ce cercle en sécurité.",
+      "value": 18
+    }
   ]
 }

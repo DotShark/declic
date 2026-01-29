@@ -185,5 +185,22 @@
         }
       ]
     }
+  ],
+  "results": [
+    {
+      "id": "result-snacking-low",
+      "text": "Ton rapport à la nourriture semble apaisé. Tu manges quand tu as faim, sans culpabilité. C'est précisément ce dont ton corps a besoin pour être en forme !",
+      "value": 8
+    },
+    {
+      "id": "result-snacking-medium",
+      "text": "Tu grignotes souvent, parfois sans vraiment avoir faim. Stress, ennui, émotions ? Identifier ce qui te pousse à manger peut être un premier pas vers un rapport plus serein avec la nourriture.",
+      "value": 12
+    },
+    {
+      "id": "result-snacking-high",
+      "text": "Manger est devenu une façon de gérer tes émotions, et tu te sens peut-être coincé dans ce cercle. La culpabilité qui suit n'arrange rien. Se faire accompagner pour comprendre ce mécanisme et l'apaiser, c'est possible et ça aide vraiment.",
+      "value": 18
+    }
   ]
 }
