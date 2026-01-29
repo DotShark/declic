@@ -57,7 +57,9 @@ defineExpose({ openModal })
           aria-label="Fermer la fenêtre"
           @click="closeModal"
         >
-          <Icon name="lucide:x" size="24" aria-hidden="true" />
+          <div class="w-6 h-6">
+            <Icon name="lucide:x" size="24" aria-hidden="true" />
+          </div>
         </button>
 
         <h2 id="modal-title" class="text-xl font-semibold text-gray-800 mb-2">
@@ -100,7 +102,9 @@ defineExpose({ openModal })
                 v-if="mailStore.isSending"
                 class="flex items-center justify-center gap-2"
               >
-                <Icon name="lucide:loader-2" class="animate-spin" />
+                <div class="w-5 h-5">
+                  <Icon name="lucide:loader-2" size="20" class="animate-spin" />
+                </div>
                 En cours d'envoi...
               </span>
               <span v-else>Soumettre</span>
