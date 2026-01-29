@@ -52,6 +52,92 @@ export const useSurveyStore = defineStore('survey', {
     canProceed(): boolean {
       return this.currentAnswers.length > 0
     },
+
+    // Progress tracking getters
+    isModuleCompleted: (state) => (behavior: Behavior) => {
+      const module = state.modules.find((m) => m.behavior === behavior)
+      if (!module) return false
+
+      const moduleAnswers = state.modulesAnswers[behavior]
+      if (!moduleAnswers) return false
+
+      // Check if all questions have at least one answer
+      return module.questions.every((question) => {
+        const answers = moduleAnswers.answers[question.id]
+        return answers !== undefined && answers.length > 0
+      })
+    },
+
+    completedModulesCount(): number {
+      return Array.from(this.selectedBehaviors).filter((behavior) =>
+        this.isModuleCompleted(behavior)
+      ).length
+    },
+
+    progressPercentage(): number {
+      const totalModules = this.selectedBehaviors.size
+      if (totalModules === 0) return 0
+
+      let progress = 0
+
+      // Each module represents an equal portion of the total
+      const moduleWeight = 100 / totalModules
+
+      // Calculate progress for each selected behavior
+      Array.from(this.selectedBehaviors).forEach((behavior) => {
+        const module = this.modules.find((m) => m.behavior === behavior)
+        
+        // If module not loaded yet, it contributes 0%
+        if (!module) return
+
+        const moduleAnswers = this.modulesAnswers[behavior]
+        if (!moduleAnswers) return
+
+        // Count answered questions in this module
+        let answeredCount = 0
+        module.questions.forEach((question) => {
+          const answers = moduleAnswers.answers[question.id]
+          if (answers !== undefined && answers.length > 0) {
+            answeredCount++
+          }
+        })
+
+        // Calculate this module's contribution to overall progress
+        const moduleProgress = (answeredCount / module.questions.length) * moduleWeight
+        progress += moduleProgress
+      })
+
+      return Math.round(progress)
+    },
+
+    modulesProgress(): Array<{
+      behavior: Behavior
+      name: string
+      icon: string
+      status: 'pending' | 'in_progress' | 'completed'
+    }> {
+      if (!this.config) return []
+
+      // Follow the order from config, not the selection order
+      return this.config.modules
+        .filter((moduleRef) => this.selectedBehaviors.has(moduleRef.behavior))
+        .map((moduleRef) => {
+          const behavior = moduleRef.behavior
+          const isCompleted = this.isModuleCompleted(behavior)
+          const isCurrent = behavior === this.currentBehavior
+
+          return {
+            behavior,
+            name: moduleRef.name,
+            icon: moduleRef.icon,
+            status: isCompleted
+              ? 'completed'
+              : isCurrent
+                ? 'in_progress'
+                : 'pending',
+          }
+        })
+    },
   },
 
   actions: {
