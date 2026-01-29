@@ -1,6 +1,10 @@
-import { describe, it, expect } from 'vitest';
-import { scoringSystem } from '../../app/utils/scoring';
-import type { ModuleAnswers, SurveyModule, BehaviorQuestion } from '../../shared/types/survey-types';
+import { describe, it, expect } from 'vitest'
+import { scoringSystem } from '../../app/utils/scoring'
+import type {
+  ModuleAnswers,
+  SurveyModule,
+  BehaviorQuestion,
+} from '../../shared/types/survey-types'
 
 describe('ScoringSystem', () => {
   const mockQuestions: BehaviorQuestion[] = [
@@ -12,8 +16,8 @@ describe('ScoringSystem', () => {
       options: [
         { id: 'a1', text: 'Answer 1', value: 10 },
         { id: 'a2', text: 'Answer 2', value: 5 },
-        { id: 'a3', text: 'Answer 3', value: 0 }
-      ]
+        { id: 'a3', text: 'Answer 3', value: 0 },
+      ],
     },
     {
       id: 'q2',
@@ -22,64 +26,64 @@ describe('ScoringSystem', () => {
       associatedBehavior: 'ALCOHOL',
       options: [
         { id: 'b1', text: 'Answer B1', value: 20 },
-        { id: 'b2', text: 'Answer B2', value: -5 }
-      ]
-    }
-  ];
+        { id: 'b2', text: 'Answer B2', value: -5 },
+      ],
+    },
+  ]
 
   const mockModule: SurveyModule = {
     id: 'module-alcohol',
     name: 'Alcool',
     behavior: 'ALCOHOL',
     icon: 'lucide:wine',
-    questions: mockQuestions
-  };
+    questions: mockQuestions,
+  }
 
   it('calculates score correctly for single choice answers', () => {
     const answers: ModuleAnswers = {
       behavior: 'ALCOHOL',
       answers: {
-        'q1': ['a1'],
-        'q2': ['b1']
-      }
-    };
+        q1: ['a1'],
+        q2: ['b1'],
+      },
+    }
 
-    const score = scoringSystem.calculateScore(answers, mockModule);
-    expect(score).toBe(30);
-  });
+    const score = scoringSystem.calculateScore(answers, mockModule)
+    expect(score).toBe(30)
+  })
 
   it('calculates score correctly for multiple choice answers', () => {
     const answers: ModuleAnswers = {
       behavior: 'ALCOHOL',
       answers: {
-        'q1': ['a1', 'a2']
-      }
-    };
+        q1: ['a1', 'a2'],
+      },
+    }
 
-    const score = scoringSystem.calculateScore(answers, mockModule);
-    expect(score).toBe(15);
-  });
+    const score = scoringSystem.calculateScore(answers, mockModule)
+    expect(score).toBe(15)
+  })
 
   it('ignores answers that are not found in the module definition', () => {
     const answers: ModuleAnswers = {
       behavior: 'ALCOHOL',
       answers: {
-        'q1': ['unknown_answer'],
-        'unknown_question': ['a1']
-      }
-    };
+        q1: ['unknown_answer'],
+        unknown_question: ['a1'],
+      },
+    }
 
-    const score = scoringSystem.calculateScore(answers, mockModule);
-    expect(score).toBe(0);
-  });
-  
+    const score = scoringSystem.calculateScore(answers, mockModule)
+    expect(score).toBe(0)
+  })
+
   it('handles empty answers', () => {
-      const answers: ModuleAnswers = {
-        behavior: 'ALCOHOL',
-        answers: {}
-      };
-      
-      const score = scoringSystem.calculateScore(answers, mockModule);
-      expect(score).toBe(0);
-  });
-});
+    const answers: ModuleAnswers = {
+      behavior: 'ALCOHOL',
+      answers: {},
+    }
+
+    const score = scoringSystem.calculateScore(answers, mockModule)
+    expect(score).toBe(0)
+  })
+})
