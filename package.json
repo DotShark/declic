@@ -11,7 +11,8 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "test": "vitest"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
@@ -29,6 +30,7 @@
   },
   "devDependencies": {
     "@iconify-json/lucide": "^1.2.87",
-    "prettier": "^3.8.1"
+    "prettier": "^3.8.1",
+    "vitest": "^4.0.18"
   }
 }
