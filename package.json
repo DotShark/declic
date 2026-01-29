@@ -1,5 +1,6 @@
 {
   "name": "declic",
+  "description": "Anonymous addiction screening and resource navigation platform for students",
   "type": "module",
   "private": true,
   "scripts": {
