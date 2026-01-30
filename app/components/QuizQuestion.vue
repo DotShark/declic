@@ -17,18 +17,20 @@ function isSelected(optionId: string): boolean {
 <template>
   <section class="flex flex-col gap-6">
     <div class="flex flex-col gap-2">
-      <h1 class="text-2xl font-bold font-family-poppins text-gray-900">
+      <h1
+        class="text-2xl font-bold font-family-poppins text-gray-900 dark:text-white"
+      >
         {{ question.text }}
       </h1>
       <p
         v-if="question.subtitle"
-        class="text-base text-gray-600 font-family-inter"
+        class="text-base text-gray-600 dark:text-gray-400 font-family-inter"
       >
         {{ question.subtitle }}
       </p>
       <p
         v-if="question.type === 'MULTIPLE_CHOICE'"
-        class="text-sm text-gray-500 font-family-inter"
+        class="text-sm text-gray-500 dark:text-gray-400 font-family-inter"
       >
         Plusieurs réponses possibles
       </p>

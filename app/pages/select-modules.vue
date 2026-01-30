@@ -43,12 +43,12 @@ const handleStartQuiz = () => {
         <Icon
           name="lucide:alert-circle"
           size="48"
-          class="text-red-500"
+          class="text-red-500 dark:text-red-400"
           aria-hidden="true"
         />
       </div>
-      <p class="text-red-600">{{ surveyStore.error }}</p>
-      <NuxtLink to="/" class="text-blue-600 underline"
+      <p class="text-red-600 dark:text-red-400">{{ surveyStore.error }}</p>
+      <NuxtLink to="/" class="text-blue-600 dark:text-blue-400 underline"
         >Retour à l'accueil</NuxtLink
       >
     </div>
@@ -60,10 +60,12 @@ const handleStartQuiz = () => {
     >
       <!-- Title Section -->
       <header class="flex flex-col gap-4">
-        <h1 class="text-3xl font-bold font-family-poppins text-gray-900">
+        <h1
+          class="text-3xl font-bold font-family-poppins text-gray-900 dark:text-white"
+        >
           Sélectionne les comportements sur lesquels tu souhaites faire le point
         </h1>
-        <p class="text-base text-gray-600 font-family-inter">
+        <p class="text-base text-gray-600 dark:text-gray-400 font-family-inter">
           Tu peux en choisir plusieurs. Plus tu en sélectionnes, plus le quiz
           sera complet.
         </p>
@@ -80,10 +82,9 @@ const handleStartQuiz = () => {
           :key="module.behavior"
           class="flex items-center gap-4 p-4 rounded-xl border-2 transition-all cursor-pointer"
           :class="{
-            'border-blue-600 bg-blue-50': surveyStore.isSelected(
-              module.behavior,
-            ),
-            'border-gray-300 bg-white hover:border-gray-400':
+            'border-blue-600 bg-blue-50 dark:border-blue-500 dark:bg-blue-900/20':
+              surveyStore.isSelected(module.behavior),
+            'border-gray-300 bg-white hover:border-gray-400 dark:border-gray-600 dark:bg-gray-800 dark:hover:border-gray-500':
               !surveyStore.isSelected(module.behavior),
           }"
           :aria-pressed="surveyStore.isSelected(module.behavior)"
@@ -96,8 +97,12 @@ const handleStartQuiz = () => {
               :name="module.icon"
               size="32"
               :class="{
-                'text-blue-600': surveyStore.isSelected(module.behavior),
-                'text-gray-600': !surveyStore.isSelected(module.behavior),
+                'text-blue-600 dark:text-blue-400': surveyStore.isSelected(
+                  module.behavior,
+                ),
+                'text-gray-600 dark:text-gray-400': !surveyStore.isSelected(
+                  module.behavior,
+                ),
               }"
               aria-hidden="true"
             />
@@ -107,8 +112,12 @@ const handleStartQuiz = () => {
           <span
             class="flex-1 text-left text-lg font-medium font-family-inter"
             :class="{
-              'text-gray-900': surveyStore.isSelected(module.behavior),
-              'text-gray-700': !surveyStore.isSelected(module.behavior),
+              'text-gray-900 dark:text-white': surveyStore.isSelected(
+                module.behavior,
+              ),
+              'text-gray-700 dark:text-gray-300': !surveyStore.isSelected(
+                module.behavior,
+              ),
             }"
           >
             {{ module.name }}
@@ -124,8 +133,12 @@ const handleStartQuiz = () => {
               "
               size="24"
               :class="{
-                'text-blue-600': surveyStore.isSelected(module.behavior),
-                'text-gray-400': !surveyStore.isSelected(module.behavior),
+                'text-blue-600 dark:text-blue-400': surveyStore.isSelected(
+                  module.behavior,
+                ),
+                'text-gray-400 dark:text-gray-500': !surveyStore.isSelected(
+                  module.behavior,
+                ),
               }"
               aria-hidden="true"
             />
@@ -139,9 +152,9 @@ const handleStartQuiz = () => {
           :disabled="!surveyStore.hasSelection"
           class="w-full px-8 py-4 font-semibold rounded-lg transition-all"
           :class="{
-            'bg-blue-600 text-white hover:bg-blue-700 cursor-pointer':
+            'bg-blue-600 text-white hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 cursor-pointer':
               surveyStore.hasSelection,
-            'bg-gray-300 text-gray-500 cursor-not-allowed':
+            'bg-gray-300 text-gray-500 dark:bg-gray-700 dark:text-gray-400 cursor-not-allowed':
               !surveyStore.hasSelection,
           }"
           :aria-label="
@@ -156,7 +169,7 @@ const handleStartQuiz = () => {
 
         <NuxtLink
           to="/"
-          class="text-center text-gray-600 hover:text-gray-900 font-family-inter"
+          class="text-center text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white font-family-inter"
           aria-label="Retourner à la page d'accueil"
         >
           Retour à l'accueil

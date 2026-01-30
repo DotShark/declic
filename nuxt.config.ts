@@ -29,7 +29,18 @@ export default defineNuxtConfig({
       ],
     },
   },
-  modules: ['@nuxt/fonts', '@nuxt/icon', '@pinia/nuxt', '@nuxt/eslint'],
+  modules: [
+    '@nuxt/fonts',
+    '@nuxt/icon',
+    '@pinia/nuxt',
+    '@nuxt/eslint',
+    '@nuxtjs/color-mode',
+  ],
+  colorMode: {
+    classSuffix: '',
+    preference: 'system',
+    fallback: 'light',
+  },
   css: ['./app/assets/css/main.css'],
   fonts: {
     families: [

@@ -57,13 +57,13 @@ defineExpose({ openModal })
       @click.self="closeModal"
     >
       <div
-        class="relative w-full max-w-md rounded-xl bg-white p-8 shadow-2xl text-center"
+        class="relative w-full max-w-md rounded-xl bg-white dark:bg-gray-800 p-8 shadow-2xl text-center"
         role="dialog"
         aria-modal="true"
         aria-labelledby="modal-title"
       >
         <button
-          class="absolute top-4 right-4 text-gray-400 hover:text-red-500 transition-colors p-1"
+          class="absolute top-4 right-4 text-gray-400 hover:text-red-500 dark:text-gray-500 dark:hover:text-red-400 transition-colors p-1"
           aria-label="Fermer la fenêtre"
           @click="closeModal"
         >
@@ -72,10 +72,13 @@ defineExpose({ openModal })
           </div>
         </button>
 
-        <h2 id="modal-title" class="text-xl font-semibold text-gray-800 mb-2">
+        <h2
+          id="modal-title"
+          class="text-xl font-semibold text-gray-800 dark:text-white mb-2"
+        >
           Recevoir mes résultats
         </h2>
-        <p class="text-gray-600 mb-6">
+        <p class="text-gray-600 dark:text-gray-400 mb-6">
           Entrez votre email pour recevoir votre compte-rendu personnalisé.
         </p>
 
@@ -89,11 +92,11 @@ defineExpose({ openModal })
               type="email"
               placeholder="nom@email.com"
               :disabled="mailStore.isSending"
-              class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition-all"
+              class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 dark:focus:ring-emerald-400 dark:focus:border-emerald-400 outline-none transition-all bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500"
               :class="[
                 mailStore.email && !mailStore.isEmailValid
-                  ? 'border-red-500 bg-red-50'
-                  : 'border-gray-300',
+                  ? 'border-red-500 bg-red-50 dark:border-red-400 dark:bg-red-900/20'
+                  : 'border-gray-300 dark:border-gray-600',
               ]"
               aria-required="true"
               @input="handleEmailInput"
@@ -105,8 +108,8 @@ defineExpose({ openModal })
               class="flex items-start gap-3 p-4 rounded-xl border-2 transition-all text-left w-full"
               :class="[
                 mailStore.gdprConsent
-                  ? 'border-blue-600 bg-blue-50'
-                  : 'border-gray-300 bg-white hover:border-gray-400',
+                  ? 'border-blue-600 bg-blue-50 dark:border-blue-500 dark:bg-blue-900/20'
+                  : 'border-gray-300 bg-white hover:border-gray-400 dark:border-gray-600 dark:bg-gray-700 dark:hover:border-gray-500',
               ]"
               :disabled="mailStore.isSending"
               @click="mailStore.gdprConsent = !mailStore.gdprConsent"
@@ -120,15 +123,19 @@ defineExpose({ openModal })
                   "
                   size="24"
                   :class="
-                    mailStore.gdprConsent ? 'text-blue-600' : 'text-gray-400'
+                    mailStore.gdprConsent
+                      ? 'text-blue-600 dark:text-blue-400'
+                      : 'text-gray-400 dark:text-gray-500'
                   "
                 />
               </div>
-              <span class="text-sm text-gray-700 font-family-inter">
+              <span
+                class="text-sm text-gray-700 dark:text-gray-300 font-family-inter"
+              >
                 J'accepte que mon adresse email soit utilisée uniquement pour
                 l'envoi de mes résultats. Elle ne sera pas conservée ni utilisée
                 à d'autres fins.
-                <span class="text-red-500">*</span>
+                <span class="text-red-500 dark:text-red-400">*</span>
               </span>
             </button>
 
@@ -138,8 +145,8 @@ defineExpose({ openModal })
               class="w-full py-3 px-6 rounded-lg font-bold text-white transition-all transform active:scale-[0.98]"
               :class="[
                 mailStore.isFormValid && !mailStore.isSending
-                  ? 'bg-emerald-500 hover:bg-emerald-600'
-                  : 'bg-gray-300',
+                  ? 'bg-emerald-500 hover:bg-emerald-600 dark:bg-emerald-600 dark:hover:bg-emerald-500'
+                  : 'bg-gray-300 dark:bg-gray-600 dark:text-gray-400',
               ]"
             >
               <span
@@ -165,8 +172,8 @@ defineExpose({ openModal })
               class="text-sm font-medium p-2 rounded"
               :class="
                 mailStore.statusMessage.includes('Échec')
-                  ? 'text-red-600 bg-red-50'
-                  : 'text-emerald-700 bg-emerald-50'
+                  ? 'text-red-600 bg-red-50 dark:text-red-400 dark:bg-red-900/20'
+                  : 'text-emerald-700 bg-emerald-50 dark:text-emerald-400 dark:bg-emerald-900/20'
               "
               role="status"
             >

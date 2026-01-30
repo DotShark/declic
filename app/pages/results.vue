@@ -57,14 +57,18 @@ const handleOpenEmailModal = () => {
           <Icon
             name="lucide:heart"
             size="64"
-            class="text-emerald-500"
+            class="text-emerald-500 dark:text-emerald-400"
             aria-hidden="true"
           />
         </div>
-        <h1 class="text-3xl font-bold font-family-poppins text-gray-900">
+        <h1
+          class="text-3xl font-bold font-family-poppins text-gray-900 dark:text-white"
+        >
           Tes résultats
         </h1>
-        <p class="text-base text-gray-600 font-family-inter max-w-lg">
+        <p
+          class="text-base text-gray-600 dark:text-gray-400 font-family-inter max-w-lg"
+        >
           Voici un aperçu de tes réponses. N'oublie pas : ce questionnaire est
           un outil d'information, pas un diagnostic.
         </p>
@@ -84,14 +88,14 @@ const handleOpenEmailModal = () => {
       <!-- Actions -->
       <nav class="flex flex-col gap-4 mt-4">
         <button
-          class="w-full px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-all"
+          class="w-full px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 transition-all"
           @click="handleOpenEmailModal"
         >
           Recevoir mes résultats par email
         </button>
 
         <button
-          class="w-full px-8 py-4 bg-emerald-600 text-white font-semibold rounded-lg hover:bg-emerald-700 transition-all flex items-center justify-center gap-2"
+          class="w-full px-8 py-4 bg-emerald-600 text-white font-semibold rounded-lg hover:bg-emerald-700 dark:bg-emerald-500 dark:hover:bg-emerald-600 transition-all flex items-center justify-center gap-2"
           @click="handleDownloadPDF"
         >
           <Icon name="lucide:download" size="20" />
@@ -99,7 +103,7 @@ const handleOpenEmailModal = () => {
         </button>
 
         <button
-          class="w-full px-8 py-4 border-2 border-gray-300 text-gray-700 font-semibold rounded-lg hover:border-gray-400 transition-all"
+          class="w-full px-8 py-4 border-2 border-gray-300 text-gray-700 font-semibold rounded-lg hover:border-gray-400 dark:border-gray-600 dark:text-gray-300 dark:hover:border-gray-500 transition-all"
           @click="handleRestart"
         >
           Recommencer le quiz
@@ -107,7 +111,7 @@ const handleOpenEmailModal = () => {
 
         <NuxtLink
           to="/"
-          class="text-center text-gray-600 hover:text-gray-900 font-family-inter py-2"
+          class="text-center text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white font-family-inter py-2"
         >
           Retour à l'accueil
         </NuxtLink>
