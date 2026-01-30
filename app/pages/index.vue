@@ -19,9 +19,7 @@ await callOnce('survey-config', () => surveyStore.loadConfig())
 </script>
 
 <template>
-  <main
-    class="flex flex-col items-center justify-center min-h-screen p-6 gap-8"
-  >
+  <main class="flex flex-col items-center justify-center min-h-dvh p-6 gap-8">
     <div
       v-if="surveyStore.error"
       class="flex flex-col items-center gap-4"

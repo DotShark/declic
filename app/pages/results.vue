@@ -48,7 +48,7 @@ const handleOpenEmailModal = () => {
 </script>
 
 <template>
-  <div class="flex flex-col min-h-screen p-6">
+  <div class="flex flex-col min-h-dvh p-6">
     <!-- Results Content -->
     <main class="flex flex-col max-w-3xl mx-auto w-full gap-8">
       <!-- Header -->

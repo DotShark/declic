@@ -54,7 +54,7 @@ const progress = computed(() => {
 <template>
   <div
     v-if="surveyStore.currentModule && surveyStore.currentQuestion"
-    class="flex flex-col min-h-screen p-6"
+    class="flex flex-col min-h-dvh p-6"
   >
     <main class="flex flex-col max-w-3xl mx-auto w-full gap-8 flex-1">
       <!-- Progress Bar -->
