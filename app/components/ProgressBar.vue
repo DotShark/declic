@@ -27,10 +27,10 @@ const segmentWidth = computed(() => {
             :name="module.icon"
             size="20"
             :class="{
-              'text-blue-600':
+              'text-blue-600 dark:text-blue-400':
                 module.status === 'completed' ||
                 module.status === 'in_progress',
-              'text-gray-400': module.status === 'pending',
+              'text-gray-400 dark:text-gray-500': module.status === 'pending',
             }"
             class="transition-all group-hover:scale-125"
             aria-hidden="true"
@@ -41,7 +41,7 @@ const segmentWidth = computed(() => {
 
     <!-- Segmented Progress Bar -->
     <div
-      class="relative w-full h-1 bg-gray-200 rounded-full overflow-hidden"
+      class="relative w-full h-1 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden"
       role="progressbar"
       :aria-valuenow="progressPercentage"
       aria-valuemin="0"
@@ -53,13 +53,13 @@ const segmentWidth = computed(() => {
         <div
           v-for="(module, index) in modulesProgress"
           :key="`bg-${module.behavior}`"
-          class="relative h-full bg-gray-300"
+          class="relative h-full bg-gray-300 dark:bg-gray-600"
           :style="{ width: `${segmentWidth}%` }"
         >
           <!-- Separator Line (except for last segment) -->
           <div
             v-if="index < modulesProgress.length - 1"
-            class="absolute right-0 top-0 bottom-0 w-0.75 bg-white"
+            class="absolute right-0 top-0 bottom-0 w-0.75 bg-white dark:bg-gray-900"
           />
         </div>
       </div>

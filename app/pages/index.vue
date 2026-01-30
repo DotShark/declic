@@ -32,11 +32,11 @@ await callOnce('survey-config', () => surveyStore.loadConfig())
         <Icon
           name="lucide:alert-circle"
           size="48"
-          class="text-red-500"
+          class="text-red-500 dark:text-red-400"
           aria-hidden="true"
         />
       </div>
-      <p class="text-red-600">{{ surveyStore.error }}</p>
+      <p class="text-red-600 dark:text-red-400">{{ surveyStore.error }}</p>
     </div>
 
     <div
@@ -47,7 +47,7 @@ await callOnce('survey-config', () => surveyStore.loadConfig())
         <Icon
           name="lucide:brain"
           size="64"
-          class="text-blue-600"
+          class="text-blue-600 dark:text-blue-400"
           aria-hidden="true"
         />
       </div>
@@ -56,11 +56,13 @@ await callOnce('survey-config', () => surveyStore.loadConfig())
         {{ surveyStore.config.title }}
       </h1>
 
-      <p class="text-lg text-gray-700 font-family-inter">
+      <p class="text-lg text-gray-700 dark:text-gray-300 font-family-inter">
         {{ surveyStore.config.description }}
       </p>
 
-      <div class="flex items-center gap-2 text-sm text-gray-600">
+      <div
+        class="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400"
+      >
         <div class="w-5 h-5">
           <Icon name="lucide:clock" size="20" aria-hidden="true" />
         </div>
@@ -72,7 +74,7 @@ await callOnce('survey-config', () => surveyStore.loadConfig())
 
       <NuxtLink
         to="/select-modules"
-        class="mt-4 px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors cursor-pointer inline-block"
+        class="mt-4 px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 transition-colors cursor-pointer inline-block"
         aria-label="Commencer le questionnaire"
       >
         Commencer

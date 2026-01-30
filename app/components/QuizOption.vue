@@ -14,8 +14,10 @@ defineEmits<{
   <button
     class="flex items-center gap-4 p-4 rounded-xl border-2 transition-all text-left"
     :class="{
-      'border-blue-600 bg-blue-50': selected,
-      'border-gray-300 bg-white hover:border-gray-400': !selected,
+      'border-blue-600 bg-blue-50 dark:border-blue-500 dark:bg-blue-900/20':
+        selected,
+      'border-gray-300 bg-white hover:border-gray-400 dark:border-gray-600 dark:bg-gray-800 dark:hover:border-gray-500':
+        !selected,
     }"
     :aria-pressed="selected"
     @click="$emit('select')"
@@ -34,8 +36,8 @@ defineEmits<{
         "
         size="24"
         :class="{
-          'text-blue-600': selected,
-          'text-gray-400': !selected,
+          'text-blue-600 dark:text-blue-400': selected,
+          'text-gray-400 dark:text-gray-500': !selected,
         }"
         aria-hidden="true"
       />
@@ -45,8 +47,8 @@ defineEmits<{
     <span
       class="flex-1 text-base font-medium font-family-inter"
       :class="{
-        'text-gray-900': selected,
-        'text-gray-700': !selected,
+        'text-gray-900 dark:text-white': selected,
+        'text-gray-700 dark:text-gray-300': !selected,
       }"
     >
       {{ text }}

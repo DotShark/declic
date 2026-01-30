@@ -68,15 +68,19 @@ const progress = computed(() => {
               <Icon
                 :name="surveyStore.currentModule.icon"
                 size="28"
-                class="text-blue-600"
+                class="text-blue-600 dark:text-blue-400"
                 aria-hidden="true"
               />
             </div>
-            <span class="text-lg font-medium text-gray-700 font-family-inter">
+            <span
+              class="text-lg font-medium text-gray-700 dark:text-gray-300 font-family-inter"
+            >
               {{ surveyStore.currentModule.name }}
             </span>
           </div>
-          <span class="text-sm text-gray-500 font-family-inter">
+          <span
+            class="text-sm text-gray-500 dark:text-gray-400 font-family-inter"
+          >
             Question {{ progress.current }}/{{ progress.total }}
           </span>
         </div>
@@ -91,8 +95,10 @@ const progress = computed(() => {
           :disabled="!surveyStore.canProceed"
           class="w-full px-8 py-4 font-semibold rounded-lg transition-all"
           :class="{
-            'bg-blue-600 text-white hover:bg-blue-700': surveyStore.canProceed,
-            'bg-gray-300 text-gray-500': !surveyStore.canProceed,
+            'bg-blue-600 text-white hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600':
+              surveyStore.canProceed,
+            'bg-gray-300 text-gray-500 dark:bg-gray-700 dark:text-gray-400':
+              !surveyStore.canProceed,
           }"
           @click="nextQuestion"
         >
@@ -101,7 +107,7 @@ const progress = computed(() => {
 
         <NuxtLink
           to="/select-modules"
-          class="text-center text-gray-600 hover:text-gray-900 font-family-inter"
+          class="text-center text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white font-family-inter"
         >
           Quitter le quiz
         </NuxtLink>
