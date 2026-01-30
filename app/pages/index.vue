@@ -74,7 +74,7 @@ await callOnce('survey-config', () => surveyStore.loadConfig())
 
       <NuxtLink
         to="/select-modules"
-        class="mt-4 px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 transition-colors cursor-pointer inline-block"
+        class="mt-4 px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-900 hover:-translate-y-0.5 dark:bg-blue-500 dark:hover:bg-blue-300 transition-all duration-300 transform cursor-pointer inline-block"
         aria-label="Commencer le questionnaire"
       >
         Commencer

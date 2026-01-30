@@ -88,14 +88,14 @@ const handleOpenEmailModal = () => {
       <!-- Actions -->
       <nav class="flex flex-col gap-4 mt-4">
         <button
-          class="w-full px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 transition-all"
+          class="w-full px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-900 hover:-translate-y-0.5 dark:bg-blue-500 dark:hover:bg-blue-300 transition-all duration-300 transform"
           @click="handleOpenEmailModal"
         >
           Recevoir mes résultats par email
         </button>
 
         <button
-          class="w-full px-8 py-4 bg-emerald-600 text-white font-semibold rounded-lg hover:bg-emerald-700 dark:bg-emerald-500 dark:hover:bg-emerald-600 transition-all flex items-center justify-center gap-2"
+          class="w-full px-8 py-4 bg-emerald-600 text-white font-semibold rounded-lg hover:bg-emerald-900 hover:-translate-y-0.5 dark:bg-emerald-500 dark:hover:bg-emerald-300 transition-all duration-300 transform flex items-center justify-center gap-2"
           @click="handleDownloadPDF"
         >
           <Icon name="lucide:download" size="20" />
@@ -103,7 +103,7 @@ const handleOpenEmailModal = () => {
         </button>
 
         <button
-          class="w-full px-8 py-4 border-2 border-gray-300 text-gray-700 font-semibold rounded-lg hover:border-gray-400 dark:border-gray-600 dark:text-gray-300 dark:hover:border-gray-500 transition-all"
+          class="w-full px-8 py-4 border-2 border-gray-300 text-gray-700 font-semibold rounded-lg hover:border-gray-400 hover:-translate-y-0.5 dark:border-gray-600 dark:text-gray-300 dark:hover:border-gray-500 transition-all duration-300 transform"
           @click="handleRestart"
         >
           Recommencer le quiz

@@ -12,11 +12,11 @@ defineEmits<{
 
 <template>
   <button
-    class="flex items-center gap-4 p-4 rounded-xl border-2 transition-all text-left"
+    class="flex items-center gap-4 p-4 rounded-xl border-2 transition-all duration-300 transform text-left"
     :class="{
       'border-blue-600 bg-blue-50 dark:border-blue-500 dark:bg-blue-900/20':
         selected,
-      'border-gray-300 bg-white hover:border-gray-400 dark:border-gray-600 dark:bg-gray-800 dark:hover:border-gray-500':
+      'border-gray-300 bg-white hover:border-gray-400 hover:translate-x-1 dark:border-gray-600 dark:bg-gray-800 dark:hover:border-gray-500':
         !selected,
     }"
     :aria-pressed="selected"

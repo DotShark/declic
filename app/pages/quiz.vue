@@ -93,9 +93,9 @@ const progress = computed(() => {
       <nav class="flex flex-col gap-4 mt-auto pt-6">
         <button
           :disabled="!surveyStore.canProceed"
-          class="w-full px-8 py-4 font-semibold rounded-lg transition-all"
+          class="w-full px-8 py-4 font-semibold rounded-lg transition-all duration-300 transform"
           :class="{
-            'bg-blue-600 text-white hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600':
+            'bg-blue-600 text-white hover:bg-blue-900 hover:-translate-y-0.5 dark:bg-blue-500 dark:hover:bg-blue-300':
               surveyStore.canProceed,
             'bg-gray-300 text-gray-500 dark:bg-gray-700 dark:text-gray-400':
               !surveyStore.canProceed,

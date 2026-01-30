@@ -47,7 +47,7 @@ defineExpose({ openModal })
     enter-active-class="transition duration-300 ease-out"
     enter-from-class="opacity-0"
     enter-to-class="opacity-100"
-    leave-active-class="transition duration-200 ease-in"
+    leave-active-class="transition duration-300 ease-in"
     leave-from-class="opacity-100"
     leave-to-class="opacity-0"
   >
@@ -142,10 +142,10 @@ defineExpose({ openModal })
             <button
               type="submit"
               :disabled="!mailStore.isFormValid || mailStore.isSending"
-              class="w-full py-3 px-6 rounded-lg font-bold text-white transition-all transform active:scale-[0.98]"
+              class="w-full py-3 px-6 rounded-lg font-bold text-white transition-all duration-300 transform active:scale-[0.98]"
               :class="[
                 mailStore.isFormValid && !mailStore.isSending
-                  ? 'bg-emerald-500 hover:bg-emerald-600 dark:bg-emerald-600 dark:hover:bg-emerald-500'
+                  ? 'bg-emerald-500 hover:bg-emerald-800 hover:-translate-y-0.5 dark:bg-emerald-600 dark:hover:bg-emerald-300'
                   : 'bg-gray-300 dark:bg-gray-600 dark:text-gray-400',
               ]"
             >
@@ -163,7 +163,7 @@ defineExpose({ openModal })
           </div>
 
           <Transition
-            enter-active-class="transition duration-200"
+            enter-active-class="transition duration-300"
             enter-from-class="transform -translate-y-2 opacity-0"
             enter-to-class="transform translate-y-0 opacity-100"
           >

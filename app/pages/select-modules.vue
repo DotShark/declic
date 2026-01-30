@@ -80,11 +80,11 @@ const handleStartQuiz = () => {
         <button
           v-for="module in surveyStore.config.modules"
           :key="module.behavior"
-          class="flex items-center gap-4 p-4 rounded-xl border-2 transition-all cursor-pointer"
+          class="flex items-center gap-4 p-4 rounded-xl border-2 transition-all duration-300 transform cursor-pointer"
           :class="{
             'border-blue-600 bg-blue-50 dark:border-blue-500 dark:bg-blue-900/20':
               surveyStore.isSelected(module.behavior),
-            'border-gray-300 bg-white hover:border-gray-400 dark:border-gray-600 dark:bg-gray-800 dark:hover:border-gray-500':
+            'border-gray-300 bg-white hover:border-gray-400 hover:translate-x-1 dark:border-gray-600 dark:bg-gray-800 dark:hover:border-gray-500':
               !surveyStore.isSelected(module.behavior),
           }"
           :aria-pressed="surveyStore.isSelected(module.behavior)"
@@ -150,9 +150,9 @@ const handleStartQuiz = () => {
       <nav class="flex flex-col gap-4 mt-4">
         <button
           :disabled="!surveyStore.hasSelection"
-          class="w-full px-8 py-4 font-semibold rounded-lg transition-all"
+          class="w-full px-8 py-4 font-semibold rounded-lg transition-all duration-300 transform"
           :class="{
-            'bg-blue-600 text-white hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 cursor-pointer':
+            'bg-blue-600 text-white hover:bg-blue-900 hover:-translate-y-0.5 dark:bg-blue-500 dark:hover:bg-blue-300 cursor-pointer':
               surveyStore.hasSelection,
             'bg-gray-300 text-gray-500 dark:bg-gray-700 dark:text-gray-400 cursor-not-allowed':
               !surveyStore.hasSelection,

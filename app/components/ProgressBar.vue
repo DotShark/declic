@@ -66,7 +66,7 @@ const segmentWidth = computed(() => {
 
       <!-- Progress Fill Overlay -->
       <div
-        class="absolute top-0 left-0 h-full bg-linear-to-r from-blue-500 to-blue-600 transition-all duration-500 ease-out rounded-full"
+        class="absolute top-0 left-0 h-full bg-linear-to-r from-blue-500 to-blue-600 transition-all duration-300 ease-out rounded-full"
         :style="{ width: `${progressPercentage}%` }"
       />
     </div>
